@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>LUVIG Serviços Gerais – Limpeza & Produtos BeL Piscinas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo-box">
+          <img src="Design_sem_nome__1_-removebg-preview (1).png" alt="LUVIG Serviços Especializados" class="logo-luvig" />
+          <div class="logo-text">
+            <span class="logo-title">LUVIG Serviços Especializados</span>
+            <span class="logo-subtitle">14 anos em Governador Celso Ramos</span>
+          </div>
+        </div>
+
+        <nav class="main-nav">
+          <a href="#inicio">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#produtos">Produtos</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="btn-whats-header" id="btnAbrirOrcamentoServicos">
+            Solicitar informações
+          </button>
+
+          <button class="btn-cart" id="btnOpenCart">
+            Carrinho <span id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- LADO ESQUERDO: TEXTO -->
+        <div class="hero-content">
+          <h1>Limpeza profissional, cuidado contínuo e produtos BeL Piscinas em um só lugar.</h1>
+          <p>
+            A LUVIG cuida da sua piscina, do seu prédio e do seu jardim com equipe especializada
+            e agora também com toda a linha BeL Piscinas – do teste da água ao acabamento.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">
+              Ver produtos BeL
+            </button>
+            <button class="btn-secondary" onclick="document.getElementById('servicos').scrollIntoView({behavior:'smooth'})">
+              Ver serviços LUVIG
+            </button>
+          </div>
+
+          <div class="hero-badges">
+            <span>+14 anos em Governador Celso Ramos</span>
+            <span>Atendimento a condomínios, residências e comércios</span>
+            <span>Produtos BeL oficiais para piscinas</span>
+          </div>
+        </div>
+
+        <!-- LADO DIREITO: VISUAL + CARROSSEL -->
+        <div class="hero-visual">
+          <!-- colagem de fundo (leve) -->
+          <div class="hero-photo hero-photo-left"></div>
+          <div class="hero-photo hero-photo-main"></div>
+          <div class="hero-photo hero-photo-right"></div>
+
+          <!-- CARROSSEL PRINCIPAL -->
+          <div class="hero-slider" id="heroSlider">
+            <div class="hero-slide active" style="background-image:url('1.png')"></div>
+            <div class="hero-slide" style="background-image:url('2.png')"></div>
+            <div class="hero-slide" style="background-image:url('3.png')"></div>
+            <div class="hero-slide" style="background-image:url('4.png')"></div>
+
+            <button class="hero-arrow hero-prev" id="heroPrev">‹</button>
+            <button class="hero-arrow hero-next" id="heroNext">›</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVIÇOS ================= -->
+  <section id="servicos" class="section">
+    <div class="container">
+      <h2>Serviços LUVIG</h2>
+      <p class="section-intro">
+        Soluções completas em limpeza de piscina, limpeza predial, corte de grama, jardinagem,
+        serviços gerais e pequenas reformas, com atendimento contínuo ou pontual conforme a sua necessidade.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Limpeza de piscina</h3>
+          <p>
+            Tratamento completo da água, aspiração, limpeza de bordas e casa de máquinas,
+            utilizando produtos BeL Piscinas e controle técnico da qualidade.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>Limpeza predial</h3>
+          <p>
+            Limpeza de áreas comuns internas e externas, halls, garagens, vidros e manutenção diária
+            ou em dias definidos em contrato.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>Corte de grama & jardim</h3>
+          <p>
+            Manutenção de gramados, poda leve, organização de canteiros e cuidado constante com a área verde
+            de condomínios e residências.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <h3>Caixa d’água, cisterna e pequenos reparos</h3>
+          <p>
+            Limpeza de reservatórios, apoio em pequenos reparos e serviços gerais para manter os imóveis em dia.
+          </p>
+        </div>
+      </div>
+
+      <div class="services-cta">
+        <button class="btn-primary" id="btnSolicitarServico">
+          Solicitar orçamento de serviços
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRODUTOS ================= -->
+  <section id="produtos" class="section section-alt">
+    <div class="container">
+      <h2>Produtos BeL para piscinas</h2>
+      <p class="section-intro">
+        Linha completa BeL Piscinas para verificar, ajustar, purificar e tratar a água,
+        com a segurança de comprar direto com quem cuida da manutenção todos os dias.
+      </p>
+
+      <!-- VERIFICAR -->
+      <div class="product-group">
+        <h3>Verificar</h3>
+        <p class="product-group-subtitle">
+          Produtos para medição de cloro e pH da água.
+        </p>
+
+        <div class="products-grid">
+          <!-- Kit teste cloro e pH -->
+          <div class="product-card">
+            <div class="product-main-click-area" data-product-id="kit-teste">
+              <div class="product-image-carousel" data-carousel="kit-teste">
+                <img src="kit teste.png"
+                     alt="Kit teste cloro e pH BeL"
+                     class="product-carousel-img active"
+                     data-variant-img>
+              </div>
+              <h4>Kit teste cloro e pH BeL</h4>
+              <p class="product-pack">
+                Conteúdo: 1 medidor + 1 indicador de cloro 23 ml + 1 indicador de pH 23 ml.
+              </p>
+            </div>
+            <button class="btn-small btn-primary" data-add-to-cart="kit-teste">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- AJUSTAR -->
+      <div class="product-group">
+        <h3>Ajustar</h3>
+        <p class="product-group-subtitle">
+          Correção de pH e alcalinidade da água.
+        </p>
+
+        <div class="products-grid">
+          <!-- Barrilha leve -->
+          <div class="product-card">
+            <div class="product-main-click-area" data-product-id="barrilha">
+              <div class="product-image-carousel" data-carousel="barrilha">
+                <img src="barrilha leve.jpg"
+                     alt="Barrilha leve BeL 2 kg"
+                     class="product-carousel-img active"
+                     data-variant-img>
+              </div>
+              <h4>Barrilha leve BeL</h4>
+              <p class="product-pack">Peso/volume: 2 kg</p>
+            </div>
+            <button class="btn-small btn-primary" data-add-to-cart="barrilha">
+              Adicionar ao carrinho
+            </button>
+          </div>
+
+          <!-- Bicarbonato de sódio -->
+          <div class="product-card">
+            <div class="product-main-click-area" data-product-id="bicarbonato">
+              <div class="product-image-carousel" data-carousel="bicarbonato">
+                <img src="bircabonato de sódio.webp"
+                     alt="Bicarbonato de sódio BeL 2 kg"
+                     class="product-carousel-img active"
+                     data-variant-img>
+              </div>
+              <h4>Bicarbonato de sódio BeL</h4>
+              <p class="product-pack">Peso/volume: 2 kg</p>
+            </div>
+            <button class="btn-small btn-primary" data-add-to-cart="bicarbonato">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PURIFICAR -->
+      <div class="product-group">
+        <h3>Purificar</h3>
+        <p class="product-group-subtitle">
+          Desinfecção da água, eliminação de microrganismos e manutenção do cloro.
+        </p>
+
+        <div class="products-grid">
+          <!-- Cloro granulado 65% (variações 1kg / 5kg / 10kg) -->
+          <div class="product-card">
+            <div class="product-main-click-area" data-product-id="cloro-granulado">
+              <div class="product-image-carousel" data-carousel="cloro-granulado">
+                <img src="cloro granulado 1kg.webp"
+                     alt="Cloro granulado BeL 1 kg"
+                     class="product-carousel-img active"
+                     data-variant-img>
+                <img src="cloro granulado 5g.webp"
+                     alt="Cloro granulado BeL 5 kg"
+                     class="product-carousel-img"
+                     data-variant-img>
+                <img src="cloro granulado bel.jpg"
+                     alt="Cloro granulado BeL 10 kg"
+                     class="product-carousel-img"
+                     data-variant-img>
+                <button class="product-carousel-arrow carousel-prev" data-carousel-prev="cloro-granulado">‹</button>
+                <button class="product-carousel-arrow carousel-next" data-carousel-next="cloro-granulado">›</button>
+              </div>
+              <h4>Cloro granulado 65% BeL</h4>
+              <p class="product-pack">Peso/volume: 1 kg / 5 kg / 10 kg</p>
+            </div>
+            <button class="btn-small btn-primary" data-add-to-cart="cloro-granulado">
+              Adicionar ao carrinho
+            </button>
+          </div>
+
+          <!-- Dicloro orgânico estabilizado (1kg / 5kg / 10kg) -->
+          <div class="product-card">
+            <div class="product-main-click-area" data-product-id="dicloro">
+              <div class="product-image-carousel" data-carousel="dicloro">
+                <img src="dicloro orgãnico 1kg.webp"
+                     alt="Dicloro orgânico BeL 1 kg"
+                     class="product-carousel-img active"
+                     data-variant-img>
+                <img src="cloro organico 5kg.webp"
+                     alt="Dicloro orgânico BeL 10 kg"
+                     class="product-carousel-img"
+                     data-variant-img>
+                <img src="DICLORO ORGANICO.jpg"
+                     alt="Dicloro orgânico BeL 5 kg"
+                     class="product-carousel-img"
+                     data-variant-img>
+                <button class="product-carousel-arrow carousel-prev" data-carousel-prev="dicloro">‹</button>
+                <button class="product-carousel-arrow carousel-next" data-carousel-next="dicloro">›</button>
+              </div>
+              <h4>Dicloro orgânico estabilizado BeL</h4>
+              <p class="product-pack">Peso/volume: 1 kg / 5 kg / 10 kg</p>
+            </div>
+            <button class="btn-small btn-primary" data-add-to-cart="dicloro">
+              Adicionar ao carrinho
+            </button>
+          </div>
+
+          <!-- Multiação cloro orgânico (1kg / 2,5kg / 5kg / 10kg) -->
+          <div class="product-card">
+            <div class="product-main-click-area" data-product-id="multicloro">
+              <div class="product-image-carousel" data-carousel="multicloro">
+                <img src="multiação 1kg.webp"
+                     alt="Multiação cloro orgânico BeL 1 kg"
+                     class="product-carousel-img active"
+                     data-variant-img>
+                <img src="multiação 2,5kg.webp"
+                     alt="Multiação cloro orgânico BeL 2,5 kg"
+                     class="product-carousel-img"
+                     data-variant-img>
+                <img src="multiação 5kg.png"
+                     alt="Multiação cloro orgânico BeL 5 kg"
+                     class="product-carousel-img"
+                     data-variant-img>
+                <button class="product-carousel-arrow carousel-prev" data-carousel-prev="multicloro">‹</button>
+                <button class="product-carousel-arrow carousel-next" data-carousel-next="multicloro">›</button>
+              </div>
+              <h4>Multiação cloro orgânico BeL</h4>
+              <p class="product-pack">Peso/volume: 1 kg / 2,5 kg / 5 kg / 10kg</p>
+            </div>
+            <button class="btn-small btn-primary" data-add-to-cart="multicloro">
+              Adicionar ao carrinho
+            </button>
+          </div>
+
+          <!-- Multiação tablete de tricloro 200g -->
+          <div class="product-card">
+            <div class="product-main-click-area" data-product-id="tablete">
+              <div class="product-image-carousel" data-carousel="tablete">
+                <img src="MULTIAÇÃO TABLETE.png"
+                     alt="Multiação tablete de tricloro BeL 200g"
+                     class="product-carousel-img active"
+                     data-variant-img>
+              </div>
+              <h4>Multiação tablete de tricloro BeL</h4>
+              <p class="product-pack">Peso/volume: 200 g</p>
+            </div>
+            <button class="btn-small btn-primary" data-add-to-cart="tablete">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRATAR -->
+      <div class="product-group">
+        <h3>Tratar</h3>
+        <p class="product-group-subtitle">
+          Apresentação, decantação, controle de algas, remoção de gordura e sujeiras na borda.
+        </p>
+
+        <div class="products-grid">
+          <!-- Algicida (1L / 5L) -->
+          <div class="product-card">
+            <div class="product-main-click-area" data-product-id="algicida">
+              <div class="product-image-carousel" data-carousel="algicida">
+                <img src="ALGICIDA.webp"
+                     alt="Algicida BeL 1 L"
+                     class="product-carousel-img active"
+                     data-variant-img>
+                <img src="algicida 5L.png"
+                     alt="Algicida BeL 5 L"
+                     class="product-carousel-img"
+                     data-variant-img>
+                <button class="product-carousel-arrow carousel-prev" data-carousel-prev="algicida">‹</button>
+                <button class="product-carousel-arrow carousel-next" data-carousel-next="algicida">›</button>
+              </div>
+              <h4>Algicida BeL</h4>
+              <p class="product-pack">Volume: 1 L / 5 L</p>
+            </div>
+            <button class="btn-small btn-primary" data-add-to-cart="algicida">
+              Adicionar ao carrinho
+            </button>
+          </div>
+
+          <!-- Clarificante (1L / 5L) -->
+          <div class="product-card">
+            <div class="product-main-click-area" data-product-id="clarificante">
+              <div class="product-image-carousel" data-carousel="clarificante">
+                <img src="CLARIFICANTE.jpg"
+                     alt="Clarificante BeL 1 L"
+                     class="product-carousel-img active"
+                     data-variant-img>
+                <img src="clarificante 5l.webp"
+                     alt="Clarificante BeL 5 L"
+                     class="product-carousel-img"
+                     data-variant-img>
+                <button class="product-carousel-arrow carousel-prev" data-carousel-prev="clarificante">‹</button>
+                <button class="product-carousel-arrow carousel-next" data-carousel-next="clarificante">›</button>
+              </div>
+              <h4>Clarificante BeL</h4>
+              <p class="product-pack">Volume: 1 L / 5 L</p>
+            </div>
+            <button class="btn-small btn-primary" data-add-to-cart="clarificante">
+              Adicionar ao carrinho
+            </button>
+          </div>
+
+          <!-- Limpa bordas (1L / 5L) -->
+          <div class="product-card">
+            <div class="product-main-click-area" data-product-id="limpa-bordas">
+              <div class="product-image-carousel" data-carousel="limpa-bordas">
+                <img src="LIMPA BORDAS.png"
+                     alt="Limpa bordas BeL 1 L"
+                     class="product-carousel-img active"
+                     data-variant-img>
+                <img src="limpa borda 5l.png"
+                     alt="Limpa bordas BeL 5 L"
+                     class="product-carousel-img"
+                     data-variant-img>
+                <button class="product-carousel-arrow carousel-prev" data-carousel-prev="limpa-bordas">‹</button>
+                <button class="product-carousel-arrow carousel-next" data-carousel-next="limpa-bordas">›</button>
+              </div>
+              <h4>Limpa bordas BeL</h4>
+              <p class="product-pack">Volume: 1 L / 5 L</p>
+            </div>
+            <button class="btn-small btn-primary" data-add-to-cart="limpa-bordas">
+              Adicionar ao carrinho
+            </button>
+          </div>
+
+          <!-- Sulfato de alumínio -->
+          <div class="product-card">
+            <div class="product-main-click-area" data-product-id="sulfato">
+              <div class="product-image-carousel" data-carousel="sulfato">
+                <img src="SULFATO DE ÁLUMINIO.webp"
+                     alt="Sulfato de alumínio BeL 2 kg"
+                     class="product-carousel-img active"
+                     data-variant-img>
+              </div>
+              <h4>Sulfato de alumínio BeL</h4>
+              <p class="product-pack">Peso/volume: 2 kg</p>
+            </div>
+            <button class="btn-small btn-primary" data-add-to-cart="sulfato">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOBRE ================= -->
+  <section id="sobre" class="about-section">
+
+  <div class="about-grid">
+
+      <!-- BLOCO MAPA + LOCALIZAÇÃO -->
+      <div class="about-box left-box">
+          <img src="gps localização.png" alt="Localização LUVIG" class="about-map-img">
+
+          <div class="about-location-text">
+              <h2>Sobre a Localização</h2>
+              <p>
+                  Nossa sede está localizada estrategicamente em Palmas – Governador Celso Ramos,
+                  garantindo agilidade no atendimento aos clientes da região e proximidade com os
+                  principais condomínios e residências atendidos diariamente pela nossa equipe.
+              </p>
+
+              <p>
+                  Avenida Augusto Prolik, nº 984, sala 2 – Bairro Palmas – CEP 88191-340<br>
+                  Governador Celso Ramos – SC
+              </p>
+          </div>
+      </div>
+
+
+      <!-- BLOCO SOBRE A EMPRESA -->
+      <div class="about-box right-box">
+          <h2>Sobre a LUVIG</h2>
+
+          <p>
+              Com mais de 14 anos de atuação, a LUVIG Serviços Gerais LTDA nasceu da força de vontade,
+              dedicação e visão empreendedora de Luciano e Girlane. Antes de consolidar a empresa, ambos
+              já administraram a tradicional sorveteria Doce Sabor, muito conhecida em Palmas.
+          </p>
+
+          <p>
+              A ideia de criar a LUVIG surgiu quando Luciano começou a realizar serviços extras de limpeza
+              de piscinas para amigos. A qualidade do trabalho fez a procura crescer naturalmente,
+              permitindo a expansão para serviços de limpeza predial, jardinagem e manutenção de áreas comuns.
+          </p>
+
+          <p>
+              Hoje, além dos serviços, a LUVIG também oferece a linha completa de produtos BeL Piscinas,
+              unindo experiência prática, suporte técnico e soluções profissionais para quem busca
+              segurança, eficiência e resultado.
+          </p>
+
+          <p>
+              Seguimos evoluindo e ampliando nossos serviços, sempre com compromisso, seriedade e amor
+              pelo que fazemos.
+          </p>
+      </div>
+
+  </div>
+
+</section>
+
+   <!-- ================= CONTATO ================= -->
+  <section id="contato" class="section section-alt">
+    <div class="container">
+      <h2>Contato</h2>
+      <p class="section-intro">
+        Fale com a LUVIG para contratar serviços, tirar dúvidas sobre os produtos BeL Piscinas
+        ou solicitar visita técnica em Governador Celso Ramos.
+      </p>
+
+      <div class="contact-grid">
+        <div>
+          <h3>Endereço</h3>
+          <p>
+            Avenida Augusto Prolik, nº 984, sala 2<br>
+            Bairro Palmas – CEP 88191-340<br>
+            Governador Celso Ramos – SC
+          </p>
+
+          <h3>Telefones</h3>
+          <p>
+            <img src="whats_logo-removebg-preview.png" class="icon-inline" alt=""> WhatsApp e ligações:
+            <strong>(48) 99656-6764</strong>
+          </p>
+          <p>
+            <img src="telefone_logo-removebg-preview.png" class="icon-inline" alt=""> Telefone para ligações (produtos):
+            <strong>(48) 2012-6117</strong> (somente ligações).
+          </p>
+
+          <h3>E-mail</h3>
+          <p>
+            <img src="email_logo-removebg-preview.png" class="icon-inline" alt="">
+            <a href="mailto:contato@luvigservicos.com.br">contato@luvigservicos.com.br</a>
+          </p>
+        </div>
+
+        <div>
+          <h3>Redes sociais</h3>
+          <p>
+            <a href="https://www.instagram.com/luvigservicos"
+               target="_blank"
+               rel="noopener noreferrer">
+              <img src="insta_sem_fundo_logo-removebg-preview.png"
+                   alt="Instagram LUVIG Serviços"
+                   class="icon-instagram">
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          © LUVIG Serviços Gerais LTDA – CNPJ 14.894.784/0001-53.
+          Pagamentos aceitos: Pix, boleto e transferência bancária.
+        </div>
+        <div>
+          Desenvolvido por
+          <img src="vm_logo_se-removebg-preview.png" alt="VM Social Media" class="footer-logo-vm">
+          VM Social Media
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MODAL PRODUTO ================= -->
+  <div class="modal-overlay" id="productModalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="productModalClose">×</button>
+      <div class="modal-body">
+        <div class="modal-product-image">
+          <img id="modalProductImage" src="" alt="" />
+        </div>
+        <div class="modal-product-info">
+          <h3 id="modalProductTitle"></h3>
+          <p id="modalProductDescription" class="modal-product-desc"></p>
+
+          <div class="modal-variant-block" id="modalVariantBlock">
+            <span class="field-label">Peso/volume:</span>
+            <div class="variant-buttons" id="modalVariantButtons"></div>
+          </div>
+
+          <div class="modal-quantity-row">
+            <div>
+              <span class="field-label">Quantidade</span>
+              <input type="number" id="modalQuantity" min="1" value="1" />
+            </div>
+            <div>
+              <span class="field-label">Valor aproximado</span>
+              <div class="modal-total" id="modalTotal">R$ 0,00</div>
+            </div>
+          </div>
+
+          <button class="btn-primary btn-small" id="modalAddToCart">
+            Adicionar ao carrinho
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CARRINHO ================= -->
+  <div class="cart-overlay" id="cartOverlay">
+    <div class="cart-panel">
+      <button class="cart-close" id="cartClose">×</button>
+      <h3>Seu carrinho</h3>
+      <div id="cartItems"></div>
+
+      <div class="cart-summary">
+        <div class="cart-total-row">
+          <span>Total aproximado:</span>
+          <strong id="cartTotal">R$ 0,00</strong>
+        </div>
+        <div style="font-size:12px; color:#6b7280; margin-bottom:8px;">
+          Valores e disponibilidade serão confirmados pelo WhatsApp antes da conclusão.
+          Formas de pagamento: Pix, boleto ou transferência bancária.
+        </div>
+        <button class="btn-secondary btn-small" id="btnContinueShopping">
+          Continuar comprando
+        </button>
+        <button class="btn-primary btn-small" id="btnCheckout">
+          Finalizar pedido
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CHECKOUT (DADOS DO CLIENTE) ================= -->
+  <div class="modal-overlay" id="checkoutOverlay">
+    <div class="modal">
+      <button class="modal-close" id="checkoutClose">×</button>
+
+      <h3>Dados para contato e entrega</h3>
+      <p class="modal-product-desc">
+        Preencha os dados abaixo para que possamos organizar o orçamento, combinar forma de pagamento
+        e entrega dos produtos.
+      </p>
+
+      <div class="checkout-grid">
+        <div>
+          <span class="field-label">Nome</span>
+          <input type="text" id="checkoutNome" />
+        </div>
+        <div>
+          <span class="field-label">Sobrenome</span>
+          <input type="text" id="checkoutSobrenome" />
+        </div>
+
+        <div>
+          <span class="field-label">Telefone / WhatsApp</span>
+          <input type="text" id="checkoutTelefone" />
+        </div>
+        <div>
+          <span class="field-label">E-mail</span>
+          <input type="email" id="checkoutEmail" />
+        </div>
+
+        <div class="full-row">
+          <span class="field-label">Linha de endereço</span>
+          <input type="text" id="checkoutEndereco" placeholder="Rua, número, complemento" />
+        </div>
+
+        <div>
+          <span class="field-label">Bairro</span>
+          <input type="text" id="checkoutBairro" />
+        </div>
+        <div>
+          <span class="field-label">Cidade</span>
+          <input type="text" id="checkoutCidade" />
+        </div>
+      </div>
+
+      <div style="margin-top:12px; font-size:12px; color:#4b5563;">
+        <strong>Formas de pagamento aceitas:</strong> Pix, boleto e transferência bancária.
+        Demais dados (CPF, chave Pix, dados bancários, prazos) serão combinados diretamente pelo WhatsApp.
+      </div>
+
+      <div class="checkout-actions">
+        <button class="btn-secondary btn-small" id="checkoutCancel">
+          Voltar
+        </button>
+        <button class="btn-primary btn-small" id="checkoutConfirm">
+          Enviar pedido para WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL ORÇAMENTO DE SERVIÇOS ================= -->
+  <div class="service-modal-overlay" id="serviceModalOverlay">
+    <div class="service-modal">
+      <button class="service-modal-close" id="serviceModalClose">×</button>
+
+      <!-- Passo 1: tipo de serviço / modalidade -->
+      <div class="service-modal-step active" data-step="1">
+        <h3>Solicitar orçamento de serviços</h3>
+        <p>
+          Para enviarmos sua solicitação, preencha primeiro o tipo de serviço e a modalidade desejada.
+        </p>
+
+        <div class="service-field">
+          <span class="service-field-label">Tipo de serviço</span>
+          <div class="service-radio-group" id="serviceTipo">
+            <label><input type="radio" name="tipoServico" value="Limpeza de piscina"> Limpeza de piscina</label>
+            <label><input type="radio" name="tipoServico" value="Limpeza predial"> Limpeza predial</label>
+            <label><input type="radio" name="tipoServico" value="Serviços gerais em prédio"> Serviços gerais em prédio</label>
+            <label><input type="radio" name="tipoServico" value="Corte de grama"> Corte de grama</label>
+            <label><input type="radio" name="tipoServico" value="Jardim"> Jardim</label>
+            <label><input type="radio" name="tipoServico" value="Limpeza de caixa d’água / cisterna"> Limpeza de caixa d’água / cisterna</label>
+            <label><input type="radio" name="tipoServico" value="Outros"> Outros</label>
+          </div>
+        </div>
+
+        <div class="service-field" style="margin-top:10px;">
+          <span class="service-field-label">Modalidade</span>
+          <div class="service-radio-group" id="serviceModalidade">
+            <label><input type="radio" name="modalidadeServico" value="Freelancer"> Freelancer (uma única vez)</label>
+            <label><input type="radio" name="modalidadeServico" value="Semanal"> Semanal</label>
+            <label><input type="radio" name="modalidadeServico" value="Mensal"> Mensal</label>
+          </div>
+        </div>
+
+        <div class="service-conditional" id="serviceFrequenciaWrapper" style="display:none;">
+          <span class="service-field-label">Quantidade de visitas (1 a 7 vezes)</span>
+          <input type="number" min="1" max="7" id="serviceFrequencia" class="service-input" />
+          <span class="service-hint">Informe quantas vezes por semana ou por mês, conforme a modalidade.</span>
+        </div>
+
+        <div class="service-conditional" id="serviceCargaHorariaWrapper" style="display:none;">
+          <span class="service-field-label">Carga horária semanal (serviços em prédio)</span>
+          <select id="serviceCargaHoraria" class="service-input">
+            <option value="">Selecione</option>
+            <option>2 horas semanais</option>
+            <option>4 horas semanais</option>
+            <option>6 horas semanais</option>
+            <option>8 horas semanais</option>
+            <option>10 horas semanais</option>
+            <option>12 horas semanais</option>
+            <option>14 horas semanais</option>
+            <option>16 horas semanais</option>
+            <option>18 horas semanais</option>
+            <option>20 horas semanais</option>
+            <option>Outro (informar no WhatsApp)</option>
+          </select>
+          <span class="service-hint">
+            Em caso de “Outro”, descreva o horário desejado na conversa pelo WhatsApp.
+          </span>
+        </div>
+
+        <div class="service-modal-actions">
+          <button class="btn-secondary btn-small" id="serviceStep1Cancel">
+            Cancelar
+          </button>
+          <button class="btn-primary btn-small" id="serviceStep1Next" disabled>
+            Próximo
+          </button>
+        </div>
+      </div>
+
+      <!-- Passo 2: pergunta exclusiva conforme serviço -->
+      <div class="service-modal-step" data-step="2">
+        <h3>Detalhes do local do serviço</h3>
+        <p>
+          Agora nos conte um pouco mais sobre o local onde o serviço será realizado.
+        </p>
+
+        <div id="servicePerguntaExclusiva"></div>
+
+        <div class="service-modal-actions">
+          <button class="btn-secondary btn-small" id="serviceStep2Back">
+            Voltar
+          </button>
+          <button class="btn-primary btn-small" id="serviceStep2Next" disabled>
+            Próximo
+          </button>
+        </div>
+      </div>
+
+      <!-- Passo 3: dados do cliente -->
+      <div class="service-modal-step" data-step="3">
+        <h3>Dados para contato</h3>
+        <p>
+          Preencha seus dados para que possamos retornar com o orçamento.
+        </p>
+
+        <div class="service-grid-2">
+          <div>
+            <span class="service-field-label">Nome</span>
+            <input type="text" id="svcNome" class="service-input" />
+          </div>
+          <div>
+            <span class="service-field-label">Sobrenome</span>
+            <input type="text" id="svcSobrenome" class="service-input" />
+          </div>
+          <div>
+            <span class="service-field-label">Telefone / WhatsApp</span>
+            <input type="text" id="svcTelefone" class="service-input" />
+          </div>
+          <div>
+            <span class="service-field-label">E-mail</span>
+            <input type="email" id="svcEmail" class="service-input" />
+          </div>
+        </div>
+
+        <div style="margin-top:8px;">
+          <span class="service-field-label">Local de atendimento</span>
+          <input type="text"
+                 id="svcLocal"
+                 class="service-input"
+                 placeholder="Bairro, cidade e ponto de referência" />
+        </div>
+
+        <div class="service-modal-actions">
+          <button class="btn-secondary btn-small" id="serviceStep3Back">
+            Voltar
+          </button>
+          <button class="btn-primary btn-small" id="serviceStep3Next" disabled>
+            Próximo
+          </button>
+        </div>
+      </div>
+
+      <!-- Passo 4: resumo e envio -->
+      <div class="service-modal-step" data-step="4">
+        <h3>Conferir e enviar</h3>
+        <p>
+          Revise as informações abaixo. Se estiver tudo certo, envie sua solicitação de orçamento.
+        </p>
+
+        <div class="service-resumo" id="serviceResumo"></div>
+
+        <div class="service-modal-actions">
+          <button class="btn-secondary btn-small" id="serviceStep4Edit">
+            Editar informações
+          </button>
+          <button class="btn-primary btn-small" id="serviceStep4Enviar">
+            Enviar para WhatsApp
+          </button>
+        </div>
+
+        <p style="margin-top:10px; font-size:12px; color:#4b5563;">
+          Depois de enviar, nossa equipe entra em contato pelo WhatsApp para detalhar o orçamento.
+          Você também receberá um e-mail automático confirmando o recebimento da solicitação.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= TOAST ================= -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ================= SCRIPT PRINCIPAL ================= -->
+  <script>
+    /* Utilitário simples de formatação */
+    function formatPrice(v) {
+      return "R$ " + v.toFixed(2).replace(".", ",");
+    }
+
+    /* ==========================
+       DADOS DOS PRODUTOS
+    ========================== */
+        const products = {
+      "kit-teste": {
+        id: "kit-teste",
+        nome: "Kit teste cloro e pH BeL",
+        descricao: "Kit completo para medição de cloro e pH da água da piscina.",
+        categoria: "Verificar",
+        imagens: ["kit teste.png"],
+        variantes: [
+          {
+            id: "kit",
+            label: "Kit padrão",
+            peso: "1 medidor + 2 reagentes (23 ml)",
+            preco: 39.99
+          }
+        ]
+      },
+      barrilha: {
+        id: "barrilha",
+        nome: "Barrilha leve BeL",
+        descricao: "Produto utilizado para elevar o pH da água da piscina, corrigindo a acidez.",
+        categoria: "Ajustar",
+        imagens: ["barrilha-leve.jpg"],
+        variantes: [
+          {
+            id: "2kg",
+            label: "2 kg",
+            peso: "2 kg",
+            preco: 36.99
+          }
+        ]
+      },
+      bicarbonato: {
+        id: "bicarbonato",
+        nome: "Bicarbonato de sódio BeL",
+        descricao: "Auxilia no aumento da alcalinidade total da água, ajudando a manter o pH estável.",
+        categoria: "Ajustar",
+        imagens: ["bicarbonato-sodio.webp"],
+        variantes: [
+          {
+            id: "2kg",
+            label: "2 kg",
+            peso: "2 kg",
+            preco: 38.9
+          }
+        ]
+      },
+      "cloro-granulado": {
+        id: "cloro-granulado",
+        nome: "Cloro granulado 65% BeL",
+        descricao: "Hipoclorito de cálcio 65% para desinfecção da água, ideal para o dia a dia da piscina.",
+        categoria: "Purificar",
+        imagens: [
+          "cloro granulado 1kg.webp",
+          "cloro granulado 5g.webp",
+          "cloro granulado bel.jpg"
+        ],
+        variantes: [
+          {
+            id: "1kg",
+            label: "1 kg",
+            peso: "1 kg",
+            preco: 53.8
+          },
+          {
+            id: "5kg",
+            label: "5 kg",
+            peso: "5 kg",
+            preco: 219.99
+          },
+          {
+            id: "10kg",
+            label: "10 kg",
+            peso: "10 kg",
+            preco: 380.0
+          }
+        ]
+      },
+      dicloro: {
+        id: "dicloro",
+        nome: "Dicloro orgânico estabilizado BeL",
+        descricao: "Cloro orgânico estabilizado que ajuda a manter o residual de cloro por mais tempo.",
+        categoria: "Purificar",
+        imagens: [
+          "dicloro orgãnico 1kg.webp",
+          "cloro organico 5kg.webp",
+          "DICLORO ORGANICO.jpg"
+        ],
+        variantes: [
+          {
+            id: "1kg",
+            label: "1 kg",
+            peso: "1 kg",
+            preco: 46.9
+          },
+          {
+            id: "5kg",
+            label: "5 kg",
+            peso: "5 kg",
+            preco: 159.99
+          },
+          {
+            id: "10kg",
+            label: "10 kg",
+            peso: "10 kg",
+            preco: 290.99
+          }
+        ]
+      },
+      multicloro: {
+        id: "multicloro",
+        nome: "Multiação cloro orgânico BeL",
+        descricao: "Produto multiação para purificar, auxiliar no combate a algas e manter a água protegida.",
+        categoria: "Purificar",
+        imagens: [
+          "multiação 1kg.webp",
+          "multiação 2,5kg.webp",
+          "multiação 5kg.png",
+          "MULTIAÇÃO CLORO.webp"
+
+        ],
+        variantes: [
+          {
+            id: "1kg",
+            label: "1 kg",
+            peso: "1 kg",
+            preco: 42.9
+          },
+          {
+            id: "2_5kg",
+            label: "2,5 kg",
+            peso: "2,5 kg",
+            preco: 78.9
+          },
+          {
+            id: "5kg",
+            label: "5 kg",
+            peso: "5 kg",
+            preco: 129.9
+          },
+          {
+            id: "10kg",
+            label: "10 kg",
+            peso: "10 kg",
+            preco: 235.99
+          }
+        ]
+      },
+      tablete: {
+        id: "tablete",
+        nome: "Multiação tablete de tricloro BeL",
+        descricao: "Tabletes de tricloro de ação contínua para dosagem em dosadores e skimmers.",
+        categoria: "Purificar",
+        imagens: ["MULTIAÇÃO TABLETE.png"],
+        variantes: [
+          {
+            id: "200g",
+            label: "200 g",
+            peso: "200 g",
+            preco: 11.39
+          }
+        ]
+      },
+      algicida: {
+        id: "algicida",
+        nome: "Algicida BeL",
+        descricao: "Auxilia na prevenção e combate de algas na piscina, mantendo a água cristalina.",
+        categoria: "Tratar",
+        imagens: ["ALGICIDA.webp", "algicida 5L.png"],
+        variantes: [
+          {
+            id: "1L",
+            label: "1 L",
+            peso: "1 L",
+            preco: 30.79
+          },
+          {
+            id: "5L",
+            label: "5 L",
+            peso: "5 L",
+            preco: 109.9
+          }
+        ]
+      },
+      clarificante: {
+        id: "clarificante",
+        nome: "Clarificante BeL",
+        descricao: "Ajuda na floculação e decantação das impurezas, deixando a água mais límpida.",
+        categoria: "Tratar",
+        imagens: ["CLARIFICANTE.jpg", "clarificante 5l.webp"],
+        variantes: [
+          {
+            id: "1L",
+            label: "1 L",
+            peso: "1 L",
+            preco: 25.49
+          },
+          {
+            id: "5L",
+            label: "5 L",
+            peso: "5 L",
+            preco: 95.9
+          }
+        ]
+      },
+      "limpa-bordas": {
+        id: "limpa-bordas",
+        nome: "Limpa bordas BeL",
+        descricao: "Indicada para remoção de gorduras e sujeiras na linha d’água e bordas da piscina.",
+        categoria: "Tratar",
+        imagens: ["LIMPA BORDAS.png", "limpa borda 5l.png"],
+        variantes: [
+          {
+            id: "1L",
+            label: "1 L",
+            peso: "1 L",
+            preco: 25.9
+          },
+          {
+            id: "5L",
+            label: "5 L",
+            peso: "5 L",
+            preco: 96.9
+          }
+        ]
+      },
+      sulfato: {
+        id: "sulfato",
+        nome: "Sulfato de alumínio BeL",
+        descricao: "Floculante utilizado para auxiliar na decantação de partículas em suspensão na água.",
+        categoria: "Tratar",
+        imagens: ["SULFATO DE ÁLUMINIO.webp"],
+        variantes: [
+          {
+            id: "2kg",
+            label: "2 kg",
+            peso: "2 kg",
+            preco: 27.39
+          }
+        ]
+      }
+    };
+
+
+    /* ==========================
+       ESTADO DO CARRINHO / CLIENTE
+    ========================== */
+    let cart = [];
+    let currentProduct = null;
+    let currentVariantId = null;
+
+    const cartCountEl = document.getElementById("cartCount");
+    const cartOverlay = document.getElementById("cartOverlay");
+    const cartItemsEl = document.getElementById("cartItems");
+    const cartTotalEl = document.getElementById("cartTotal");
+
+    const toast = document.getElementById("toast");
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2200);
+    }
+
+    function updateCartCount() {
+      const total = cart.reduce((sum, item) => sum + item.qtd, 0);
+      cartCountEl.textContent = total;
+    }
+
+    function rebuildCartUI() {
+      if (!cartItemsEl) return;
+      cartItemsEl.innerHTML = "";
+      if (cart.length === 0) {
+        cartItemsEl.innerHTML = "<p style='font-size:13px;color:#6b7280;'>Seu carrinho está vazio.</p>";
+        cartTotalEl.textContent = "R$ 0,00";
+        return;
+      }
+
+      let total = 0;
+      cart.forEach((item, index) => {
+        const li = document.createElement("div");
+        li.className = "cart-item-row";
+
+        const left = document.createElement("div");
+        left.className = "cart-item-main";
+        left.innerHTML = `
+          <strong>${item.nome}</strong>
+          <span>${item.peso}</span>
+          <span>Qtd.: ${item.qtd}</span>
+        `;
+
+        const right = document.createElement("div");
+        const subtotal = item.preco * item.qtd;
+        total += subtotal;
+        right.innerHTML = `
+          <div>${formatPrice(item.preco)}</div>
+          <div style="font-weight:600;">${formatPrice(subtotal)}</div>
+          <button style="margin-top:4px;font-size:11px;border:none;background:#fee2e2;color:#991b1b;border-radius:999px;padding:2px 8px;cursor:pointer;" data-remove="${index}">
+            remover
+          </button>
+        `;
+
+        li.appendChild(left);
+        li.appendChild(right);
+        cartItemsEl.appendChild(li);
+      });
+
+      cartTotalEl.textContent = formatPrice(total);
+
+      // botão remover
+      cartItemsEl.querySelectorAll("[data-remove]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const idx = parseInt(btn.getAttribute("data-remove"), 10);
+          cart.splice(idx, 1);
+          updateCartCount();
+          rebuildCartUI();
+        });
+      });
+    }
+
+    /* ==========================
+       MODAL PRODUTO
+    ========================== */
+
+    const productModalOverlay = document.getElementById("productModalOverlay");
+    const modalProductImage = document.getElementById("modalProductImage");
+    const modalProductTitle = document.getElementById("modalProductTitle");
+    const modalProductDescription = document.getElementById("modalProductDescription");
+    const modalVariantBlock = document.getElementById("modalVariantBlock");
+    const modalVariantButtons = document.getElementById("modalVariantButtons");
+    const modalQuantity = document.getElementById("modalQuantity");
+    const modalTotal = document.getElementById("modalTotal");
+    const modalAddToCart = document.getElementById("modalAddToCart");
+
+    function openProductModal(productId) {
+      const product = products[productId];
+      if (!product) return;
+
+      currentProduct = product;
+      currentVariantId = product.variantes[0]?.id || null;
+
+      // imagem principal (sempre primeira)
+      modalProductImage.src = product.imagens[0] || "";
+      modalProductImage.alt = product.nome;
+
+      modalProductTitle.textContent = product.nome;
+      modalProductDescription.textContent = product.descricao;
+
+      // variantes
+      modalVariantButtons.innerHTML = "";
+if (product.variantes.length > 1) {
+  modalVariantBlock.style.display = "block";
+
+  product.variantes.forEach((v, index) => {
+    const btn = document.createElement("button");
+    btn.className = "variant-btn";
+    if (v.id === currentVariantId) btn.classList.add("active");
+    btn.textContent = v.peso;
+    btn.dataset.variantId = v.id;
+
+    btn.addEventListener("click", () => {
+      currentVariantId = v.id;
+
+      // visual: marca o botão ativo
+      modalVariantButtons
+        .querySelectorAll(".variant-btn")
+        .forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      // foto correspondente à variante
+      const imgForVariant = product.imagens[index] || product.imagens[0];
+      modalProductImage.src = imgForVariant;
+
+      updateModalTotal();
+    });
+
+    modalVariantButtons.appendChild(btn);
+  });
+
+} else {
+  modalVariantBlock.style.display = "none";
+}
+
+modalQuantity.value = 1;
+      updateModalTotal();
+
+      productModalOverlay.classList.add("active");
+    }
+
+    function getSelectedVariant() {
+      if (!currentProduct) return null;
+      return currentProduct.variantes.find(v => v.id === currentVariantId) || currentProduct.variantes[0];
+    }
+
+    function updateModalTotal() {
+      const variant = getSelectedVariant();
+      if (!variant) {
+        modalTotal.textContent = "R$ 0,00";
+        return;
+      }
+      const qtd = Math.max(1, parseInt(modalQuantity.value || "1", 10));
+      modalQuantity.value = qtd;
+      const valor = variant.preco * qtd;
+      modalTotal.textContent = formatPrice(valor);
+    }
+
+    document.getElementById("productModalClose").addEventListener("click", () => {
+      productModalOverlay.classList.remove("active");
+    });
+
+    productModalOverlay.addEventListener("click", (e) => {
+      if (e.target === productModalOverlay) {
+        productModalOverlay.classList.remove("active");
+      }
+    });
+
+    modalQuantity.addEventListener("input", updateModalTotal);
+
+    modalAddToCart.addEventListener("click", () => {
+      const variant = getSelectedVariant();
+      if (!currentProduct || !variant) return;
+
+      const qtd = Math.max(1, parseInt(modalQuantity.value || "1", 10));
+
+      cart.push({
+        id: currentProduct.id,
+        nome: currentProduct.nome,
+        peso: variant.peso,
+        preco: variant.preco,
+        qtd
+      });
+
+      updateCartCount();
+      rebuildCartUI();
+      productModalOverlay.classList.remove("active");
+      showToast("Produto adicionado ao carrinho.");
+    });
+
+    // liga cards e botões ao modal
+    document.querySelectorAll(".product-main-click-area").forEach(el => {
+      el.addEventListener("click", () => {
+        const id = el.getAttribute("data-product-id");
+        openProductModal(id);
+      });
+    });
+
+    document.querySelectorAll("[data-add-to-cart]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-add-to-cart");
+        openProductModal(id);
+      });
+    });
+
+    /* ==========================
+       CARRINHO / CHECKOUT
+    ========================== */
+
+    document.getElementById("btnOpenCart").addEventListener("click", () => {
+      rebuildCartUI();
+      cartOverlay.classList.add("active");
+    });
+
+    document.getElementById("cartClose").addEventListener("click", () => {
+      cartOverlay.classList.remove("active");
+    });
+
+    cartOverlay.addEventListener("click", (e) => {
+      if (e.target === cartOverlay) cartOverlay.classList.remove("active");
+    });
+
+    document.getElementById("btnContinueShopping").addEventListener("click", () => {
+      cartOverlay.classList.remove("active");
+      document.getElementById("produtos").scrollIntoView({ behavior: "smooth" });
+    });
+
+    const checkoutOverlay = document.getElementById("checkoutOverlay");
+
+    document.getElementById("btnCheckout").addEventListener("click", () => {
+      if (cart.length === 0) {
+        showToast("Seu carrinho está vazio.");
+        return;
+      }
+      checkoutOverlay.classList.add("active");
+    });
+
+    document.getElementById("checkoutClose").addEventListener("click", () => {
+      checkoutOverlay.classList.remove("active");
+    });
+
+    document.getElementById("checkoutCancel").addEventListener("click", () => {
+      checkoutOverlay.classList.remove("active");
+    });
+
+    checkoutOverlay.addEventListener("click", (e) => {
+      if (e.target === checkoutOverlay) checkoutOverlay.classListemove("active");
+    });
+
+    document.getElementById("checkoutConfirm").addEventListener("click", () => {
+      const nome = document.getElementById("checkoutNome").value.trim();
+      const sobrenome = document.getElementById("checkoutSobrenome").value.trim();
+      const telefone = document.getElementById("checkoutTelefone").value.trim();
+      const email = document.getElementById("checkoutEmail").value.trim();
+      const endereco = document.getElementById("checkoutEndereco").value.trim();
+      const bairro = document.getElementById("checkoutBairro").value.trim();
+      const cidade = document.getElementById("checkoutCidade").value.trim();
+
+      if (!nome || !sobrenome || !telefone || !email || !endereco || !bairro || !cidade) {
+        showToast("Preencha todos os dados para finalizar o pedido.");
+        return;
+      }
+
+      let linhasProdutos = "";
+      cart.forEach(item => {
+        linhasProdutos += `${item.qtd}x ${item.nome} - ${item.peso} - ${formatPrice(item.preco)}%0A`;
+      });
+
+      const msg =
+        "Olá! gostaria de finalizar meu pedido que fiz no site da Luvig.%0A%0A" +
+        linhasProdutos +
+        "%0AGostaria de solicitar o orçamento! Desde já agradeço.%0A%0A" +
+        `Nome: ${nome} ${sobrenome}%0A` +
+        `Telefone: ${telefone}%0A` +
+        `Endereço: ${endereco}, Bairro ${bairro}, ${cidade} - SC`;
+
+      const whatsappNumero = "5548996566764"; // apenas WhatsApp
+      const url = `https://wa.me/${whatsappNumero}?text=${msg}`;
+      window.open(url, "_blank");
+
+      /* E-mail automático para o cliente com resumo */
+      const assunto = encodeURIComponent(`Recebemos seu pedido de orçamento, ${nome}! ✅`);
+      let corpo =
+        "LUVIG Serviços Gerais LTDA%0A%0A" +
+        `Olá, ${nome}.%0A%0A` +
+        "Confirmamos o recebimento da sua solicitação realizada através do nosso sistema.%0A" +
+        "Abaixo, listamos os detalhes do seu pedido para conferência:%0A%0A" +
+        "📋 Resumo da Solicitação:%0A%0A";
+
+      cart.forEach(item => {
+        corpo += `• ${item.qtd}x ${item.nome} - ${item.peso} (${formatPrice(item.preco)})%0A`;
+      });
+
+      corpo +=
+        "%0AA equipe da Luvig Serviços Gerais LTDA já está analisando esses itens.%0A%0A" +
+        "O que acontece agora? Nossa equipe entrará em contato com você diretamente pelo WhatsApp para confirmar " +
+        "a disponibilidade, passar os valores finais e fechar a proposta.%0A%0A" +
+        "ℹ️ Aviso Importante: Este é um e-mail automático apenas para registrar o recebimento do seu pedido. " +
+        "Por favor, não responda a esta mensagem. Todo o nosso atendimento humano seguirá exclusivamente pelo WhatsApp.%0A%0A" +
+        "Atenciosamente,%0AEquipe Luvig Serviços Gerais LTDA.";
+
+      window.open(`mailto:${encodeURIComponent(email)}?subject=${assunto}&body=${corpo}`, "_blank");
+
+      showToast("Pedido enviado para o WhatsApp.");
+      checkoutOverlay.classList.remove("active");
+    });
+
+    /* ==========================
+       TOPO – CARROSSEL HERO
+    ========================== */
+
+    (function initHeroSlider() {
+      const slides = Array.from(document.querySelectorAll("#heroSlider .hero-slide"));
+      const prev = document.getElementById("heroPrev");
+      const next = document.getElementById("heroNext");
+      if (slides.length === 0) return;
+
+      let idx = 0;
+
+      function showSlide(newIndex) {
+        slides.forEach(s => s.classList.remove("active"));
+        idx = (newIndex + slides.length) % slides.length;
+        slides[idx].classList.add("active");
+      }
+
+      prev.addEventListener("click", () => showSlide(idx - 1));
+      next.addEventListener("click", () => showSlide(idx + 1));
+
+      setInterval(() => showSlide(idx + 1), 7000);
+    })();
+
+    /* ==========================
+       CARROSSEL DENTRO DOS CARDS
+    ========================== */
+
+    function setupProductCardCarousel(productId) {
+      const wrapper = document.querySelector(`[data-carousel='${productId}']`);
+      if (!wrapper) return;
+
+      const imgs = Array.from(wrapper.querySelectorAll("img[data-variant-img]"));
+      if (imgs.length <= 1) return; // sem variação
+
+      let current = 0;
+
+      function showImage(newIndex, direction) {
+        imgs.forEach(img => {
+          img.classList.remove("active", "slide-in-left", "slide-in-right");
+        });
+
+        current = (newIndex + imgs.length) % imgs.length;
+        const img = imgs[current];
+        img.classList.add("active");
+        img.classList.add(direction === "left" ? "slide-in-left" : "slide-in-right");
+      }
+
+      const btnNext = wrapper.querySelector(`[data-carousel-next='${productId}']`);
+      const btnPrev = wrapper.querySelector(`[data-carousel-prev='${productId}']`);
+
+      if (btnNext) {
+        btnNext.addEventListener("click", (e) => {
+          e.stopPropagation();
+          showImage(current + 1, "right");
+        });
+      }
+
+      if (btnPrev) {
+        btnPrev.addEventListener("click", (e) => {
+          e.stopPropagation();
+          showImage(current - 1, "left");
+        });
+      }
+
+      // animação automática a cada 6 segundos
+      setInterval(() => showImage(current + 1, "right"), 6000);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      [
+        "cloro-granulado",
+        "dicloro",
+        "multicloro",
+        "algicida",
+        "clarificante",
+        "limpa-bordas"
+      ].forEach(setupProductCardCarousel);
+    });
+
+    /* ==========================
+       MODAL ORÇAMENTO SERVIÇOS
+    ========================== */
+
+    const svcOverlay = document.getElementById("serviceModalOverlay");
+    const svcSteps = Array.from(document.querySelectorAll(".service-modal-step"));
+    let svcStepAtual = 1;
+
+    const svcState = {
+      tipo: "",
+      modalidade: "",
+      frequencia: "",
+      cargaHoraria: "",
+      exclusiva: "",
+      nome: "",
+      sobrenome: "",
+      telefone: "",
+      email: "",
+      local: ""
+    };
+
+    function setSvcStep(step) {
+      svcStepAtual = step;
+      svcSteps.forEach(el => {
+        el.classList.toggle("active", parseInt(el.dataset.step, 10) === step);
+      });
+    }
+
+    function abrirSvcModal() {
+      svcOverlay.classList.add("active");
+      setSvcStep(1);
+    }
+
+    function fecharSvcModal() {
+      svcOverlay.classList.remove("active");
+    }
+
+    document.getElementById("btnAbrirOrcamentoServicos").addEventListener("click", abrirSvcModal);
+    document.getElementById("btnSolicitarServico").addEventListener("click", abrirSvcModal);
+    document.getElementById("serviceModalClose").addEventListener("click", fecharSvcModal);
+    svcOverlay.addEventListener("click", (e) => {
+      if (e.target === svcOverlay) fecharSvcModal();
+    });
+
+    // PASSO 1 – tipo / modalidade
+    const step1Next = document.getElementById("serviceStep1Next");
+    const step1Cancel = document.getElementById("serviceStep1Cancel");
+    const tipoGroup = document.getElementById("serviceTipo");
+    const modGroup = document.getElementById("serviceModalidade");
+    const freqWrapper = document.getElementById("serviceFrequenciaWrapper");
+    const freqInput = document.getElementById("serviceFrequencia");
+    const cargaWrapper = document.getElementById("serviceCargaHorariaWrapper");
+    const cargaSelect = document.getElementById("serviceCargaHoraria");
+
+    function checkStep1Valid() {
+      const tipo = tipoGroup.querySelector("input[name='tipoServico']:checked");
+      const mod = modGroup.querySelector("input[name='modalidadeServico']:checked");
+      let ok = !!tipo && !!mod;
+
+      const tipoVal = tipo ? tipo.value : "";
+      const modVal = mod ? mod.value : "";
+
+      // mostrar frequência (para semanal / mensal)
+      if (modVal === "Semanal" || modVal === "Mensal") {
+        freqWrapper.style.display = "block";
+        if (!freqInput.value) ok = false;
+      } else {
+        freqWrapper.style.display = "none";
+        freqInput.value = "";
+      }
+
+      // carga horária para limpeza predial / serviços gerais
+      if (tipoVal === "Limpeza predial" || tipoVal === "Serviços gerais em prédio") {
+        cargaWrapper.style.display = "block";
+        if (!cargaSelect.value) ok = false;
+      } else {
+        cargaWrapper.style.display = "none";
+        cargaSelect.value = "";
+      }
+
+      step1Next.disabled = !ok;
+    }
+
+    tipoGroup.addEventListener("change", checkStep1Valid);
+    modGroup.addEventListener("change", checkStep1Valid);
+    freqInput.addEventListener("input", checkStep1Valid);
+    cargaSelect.addEventListener("change", checkStep1Valid);
+
+    step1Next.addEventListener("click", () => {
+      const tipo = tipoGroup.querySelector("input[name='tipoServico']:checked");
+      const mod = modGroup.querySelector("input[name='modalidadeServico']:checked");
+      svcState.tipo = tipo ? tipo.value : "";
+      svcState.modalidade = mod ? mod.value : "";
+      svcState.frequencia = freqInput.value;
+      svcState.cargaHoraria = cargaSelect.value;
+
+      // montar pergunta exclusiva
+      const exclusiveDiv = document.getElementById("servicePerguntaExclusiva");
+      exclusiveDiv.innerHTML = "";
+      let label = "";
+      let hint = "";
+
+      switch (svcState.tipo) {
+        case "Limpeza de piscina":
+          label = "Tamanho da piscina e volume da água";
+          hint = "Informe em m² (área da piscina) e m³ (volume).";
+          break;
+        case "Limpeza predial":
+        case "Serviços gerais em prédio":
+          label = "Área do prédio e quantidade de andares";
+          hint = "Ex.: 1.200 m² e 8 andares.";
+          break;
+        case "Corte de grama":
+          label = "Tamanho aproximado do terreno para corte de grama";
+          hint = "Você pode informar em m² ou outra referência.";
+          break;
+        case "Jardim":
+          label = "Tamanho aproximado da área de jardim";
+          hint = "Informe em m² e se há canteiros, arbustos etc.";
+          break;
+        case "Limpeza de caixa d’água / cisterna":
+          label = "Volume da caixa d’água ou cisterna";
+          hint = "Informe em m³ ou litros.";
+          break;
+        default:
+          label = "Descreva o serviço que você precisa";
+          hint = "Inclua o máximo de detalhes possível.";
+      }
+
+      exclusiveDiv.innerHTML = `
+        <span class="service-field-label">${label}</span>
+        <textarea id="svcExclusiva" class="service-input" rows="3"></textarea>
+        <span class="service-hint">${hint}</span>
+      `;
+
+      document.getElementById("serviceStep2Next").disabled = true;
+
+      document.getElementById("svcExclusiva").addEventListener("input", () => {
+        const v = document.getElementById("svcExclusiva").value.trim();
+        document.getElementById("serviceStep2Next").disabled = !v;
+      });
+
+      setSvcStep(2);
+    });
+
+    step1Cancel.addEventListener("click", fecharSvcModal);
+
+    // PASSO 2
+    const step2Next = document.getElementById("serviceStep2Next");
+    const step2Back = document.getElementById("serviceStep2Back");
+
+    step2Next.addEventListener("click", () => {
+      const v = document.getElementById("svcExclusiva").value.trim();
+      if (!v) return;
+      svcState.exclusiva = v;
+      setSvcStep(3);
+      checkStep3Valid();
+    });
+
+    step2Back.addEventListener("click", () => setSvcStep(1));
+
+    // PASSO 3
+    const step3Next = document.getElementById("serviceStep3Next");
+    const step3Back = document.getElementById("serviceStep3Back");
+
+    function checkStep3Valid() {
+      svcState.nome = document.getElementById("svcNome").value.trim();
+      svcState.sobrenome = document.getElementById("svcSobrenome").value.trim();
+      svcState.telefone = document.getElementById("svcTelefone").value.trim();
+      svcState.email = document.getElementById("svcEmail").value.trim();
+      svcState.local = document.getElementById("svcLocal").value.trim();
+
+      const ok =
+        svcState.nome &&
+        svcState.sobrenome &&
+        svcState.telefone &&
+        svcState.email &&
+        svcState.local;
+
+      step3Next.disabled = !ok;
+    }
+
+    ["svcNome", "svcSobrenome", "svcTelefone", "svcEmail", "svcLocal"].forEach(id => {
+      const el = document.getElementById(id);
+      el.addEventListener("input", checkStep3Valid);
+    });
+
+    step3Next.addEventListener("click", () => {
+      // monta resumo
+      const resumoEl = document.getElementById("serviceResumo");
+      let resumo = `Serviço: ${svcState.tipo}\n`;
+      resumo += `Modalidade: ${svcState.modalidade}`;
+      if (svcState.frequencia) {
+        resumo += ` - ${svcState.frequencia}x`;
+      }
+      resumo += "\n";
+      if (svcState.cargaHoraria) {
+        resumo += `Carga horária: ${svcState.cargaHoraria}\n`;
+      }
+      resumo += `Detalhes do local/medidas: ${svcState.exclusiva}\n\n`;
+      resumo += `Nome: ${svcState.nome} ${svcState.sobrenome}\n`;
+      resumo += `Telefone/WhatsApp: ${svcState.telefone}\n`;
+      resumo += `E-mail: ${svcState.email}\n`;
+      resumo += `Local de atendimento: ${svcState.local}`;
+      resumoEl.textContent = resumo;
+
+      setSvcStep(4);
+    });
+
+    step3Back.addEventListener("click", () => setSvcStep(2));
+
+    // PASSO 4
+    const step4Edit = document.getElementById("serviceStep4Edit");
+    const step4Enviar = document.getElementById("serviceStep4Enviar");
+
+    step4Edit.addEventListener("click", () => setSvcStep(1));
+
+    step4Enviar.addEventListener("click", () => {
+      const resumo = document.getElementById("serviceResumo").textContent;
+
+      const msg =
+        "Olá, gostaria de solicitar um orçamento! Seguem os dados abaixo:%0A%0A" +
+        encodeURIComponent(resumo).replace(/%0A/g, "%0A");
+
+      const whatsappNumero = "5548996566764";
+      const url = `https://wa.me/${whatsappNumero}?text=${msg}`;
+      window.open(url, "_blank");
+
+      // e-mail automático para o cliente
+      const assunto = encodeURIComponent(`Recebemos seu pedido de orçamento, ${svcState.nome}! ✅`);
+      let corpo =
+        "LUVIG Serviços Gerais LTDA%0A%0A" +
+        `Olá, ${svcState.nome}.%0A%0A` +
+        "Confirmamos o recebimento da sua solicitação realizada através do nosso sistema.%0A" +
+        "Abaixo, listamos os detalhes do seu pedido para conferência:%0A%0A" +
+        "📋 Resumo da Solicitação:%0A%0A" +
+        encodeURIComponent(resumo).replace(/%0A/g, "%0A") +
+        "%0A%0AA equipe da Luvig Serviços Gerais LTDA já está analisando esses itens.%0A%0A" +
+        "O que acontece agora? Nossa equipe entrará em contato com você diretamente pelo WhatsApp para confirmar a disponibilidade, " +
+        "passar os valores finais e fechar a proposta.%0A%0A" +
+        "ℹ️ Aviso Importante: Este é um e-mail automático apenas para registrar o recebimento do seu pedido. " +
+        "Por favor, não responda a esta mensagem. Todo o nosso atendimento humano seguirá exclusivamente pelo WhatsApp.%0A%0A" +
+        "Atenciosamente,%0AEquipe Luvig Serviços Gerais LTDA.";
+
+      window.open(`mailto:${encodeURIComponent(svcState.email)}?subject=${assunto}&body=${corpo}`, "_blank");
+
+      showToast("Solicitação enviada para o WhatsApp.");
+      fecharSvcModal();
+    });
+  </script>
+</body>
+</html>
