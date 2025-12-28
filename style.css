@@ -1200,6 +1200,54 @@ button {
     text-align: center;
     width: 100%;
 }
+/* Ajustes para telas pequenas (celular) */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 40px 16px;
+    }
+
+    /* Se você tiver um container padrão */
+    .container {
+        padding: 0 16px;
+    }
+
+    /* Hero (parte de cima com texto + carrossel) em coluna */
+    .hero-content {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .hero-text {
+        text-align: left; /* ou center se você preferir */
+    }
+
+    /* Serviços e produtos em 1 coluna */
+    .services-grid,
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    /* Mapa + Sobre a LUVIG em uma coluna também */
+    .about-layout {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .about-location,
+    .about-text {
+        width: 100%;
+    }
+}
+
 
 
 
