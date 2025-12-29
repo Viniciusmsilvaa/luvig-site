@@ -1375,10 +1375,84 @@ button {
     .hero-section {
         margin-top: 8px;
     }
+   /* --- Ajustes de topo para CELULAR (até 768px) --- */
+@media (max-width: 768px) {
+
+  /* Evitar scroll lateral e zoom estranho */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Container do topo (header) em COLUNA no mobile */
+  header .container,
+  .site-header .container,
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  /* Logo menor */
+  .logo-luvig,
+  .header-logo img,
+  header img[alt*="LUVIG"] {
+    max-height: 32px;
+    width: auto;
+  }
+
+  /* Título LUVIG Serviços Especializados menor */
+  .header-title,
+  .header-brand,
+  header h1 {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  /* Subtítulo “14 anos em Governador Celso Ramos…” menor */
+  .header-subtitle,
+  .header-tagline,
+  header small {
+    font-size: 12px;
+  }
+
+  /* Menu de navegação em linha, mas com quebra */
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+  }
+
+  header nav a {
+    font-size: 14px;
+  }
+
+  /* Botões Solicitar informações / Carrinho lado a lado e menores */
+  .header-actions,
+  .top-actions,
+  .header-buttons {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    justify-content: space-between;
+  }
+
+  .header-actions .btn,
+  .header-actions button,
+  .btn-header,
+  .btn-quote,
+  .btn-cart {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 13px;
+  }
 }
 
 
-}
+
+
+
 
 
 
