@@ -14,6 +14,12 @@ body {
   height: 100%;
 }
 
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #111827;
@@ -1278,6 +1284,34 @@ button {
         text-align: center;
     }
 
+/* ======= Ajustes de largura para celular ======= */
+@media (max-width: 768px) {
+
+    /* Se você tiver um wrapper principal, coloque aqui.
+       Vou cobrir algumas opções comuns de uma vez. */
+
+    .page-wrapper,
+    .site-wrapper,
+    .main-container,
+    .container,
+    .hero,
+    header {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Menu não estourar lateralmente */
+    .header-content,
+    .navbar,
+    .nav-links {
+        flex-wrap: wrap;
+    }
+}
 
 }
 
