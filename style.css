@@ -1092,365 +1092,85 @@ button {
   transform: translateX(-50%) translateY(0);
 }
 
-/* =========================
-   RESPONSIVO
-========================= */
-@media (max-width: 960px) {
-  .hero-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .hero-visual {
-    order: -1;
-  }
-
-  .services-grid,
-  .products-grid,
-  .about-grid,
-  .contact-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .products-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .modal-body {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .cart-panel {
-    width: 100%;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 640px) {
-  .products-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .service-radio-group {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .service-grid-2,
-  .checkout-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .hero-slider {
-    height: 220px;
-  }
-
-}
- .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 35px;
-    margin-top: 20px;
-    align-items: stretch;
-}
-
-.about-box {
-    background: #0b5cff;
-    padding: 25px;
-    border-radius: 20px;
-    color: white;
-}
-
-.about-box h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.about-box p {
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-.left-box {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.about-map-img {
-    width: 100%;
-    height: 300px;
-    border-radius: 15px;
-    object-fit: cover;
-}
-
-/* Caixa da direita branca */
-.right-box {
-    background: #ffffff;
-    color: #333;
-    border-radius: 20px;
-    font-size: 250px;      /* Aumenta a fonte do texto */
-    line-height: 5;     /* Deixa mais confortável de ler */
-}
-
-.about-luvig-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* CENTRALIZA horizontalmente */
-}
-
-.about-luvig-content h2 {
-    text-align: center;
-    width: 100%;
-}
-/* Ajustes para telas pequenas (celular) */
+/* ===== HEADER RESPONSIVO PARA CELULAR ===== */
 @media (max-width: 768px) {
 
-    body {
-        font-size: 14px;
-    }
-
-    .section {
-        padding: 40px 16px;
-    }
-
-    /* Se você tiver um container padrão */
-    .container {
-        padding: 0 16px;
-    }
-
-    /* Hero (parte de cima com texto + carrossel) em coluna */
-    .hero-content {
-        flex-direction: column;
-        gap: 24px;
-    }
-
-    .hero-text {
-        text-align: left; /* ou center se você preferir */
-    }
-
-    /* Serviços e produtos em 1 coluna */
-    .services-grid,
-    .products-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .product-card {
-        width: 100%;
-    }
-
-    /* Mapa + Sobre a LUVIG em uma coluna também */
-    .about-layout {
-        flex-direction: column;
-        gap: 24px;
-    }
-
-    .about-location,
-    .about-text {
-        width: 100%;
-    }
-
-   /* ===================== RESPONSIVO - MOBILE ===================== */
-@media (max-width: 768px){
-
-    .about-wrapper{
-        display: block !important;
-    }
-
-    /* Caixa azul do mapa */
-    .about-box {
-        width: 100% !important;
-        margin: 0 !important;
-        border-radius: 0px;
-    }
-
-    .about-box img{
-        width: 100%;
-        height: auto;
-    }
-
-    /* Caixa do texto Sobre a LUVIG */
-    .about-text {
-        width: 100% !important;
-        margin-top: 20px;
-        padding: 20px;
-        text-align: left;
-    }
-
-    .about-text h2{
-        text-align: center;
-    }
-
-/* ======= Ajustes de largura para celular ======= */
-@media (max-width: 768px) {
-
-    /* Se você tiver um wrapper principal, coloque aqui.
-       Vou cobrir algumas opções comuns de uma vez. */
-
-    .page-wrapper,
-    .site-wrapper,
-    .main-container,
-    .container,
-    .hero,
-    header {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-
-    /* Menu não estourar lateralmente */
-    .header-content,
-    .navbar,
-    .nav-links {
-        flex-wrap: wrap;
-    }
-
-   /* ====== AJUSTES DO CABEÇALHO PARA CELULAR ====== */
-@media (max-width: 768px) {
-
-    /* Container principal do header (onde fica logo + menu + botões) */
-    .header-content,
-    header .container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        width: 100%;
-    }
-
-    /* BLOCO DA LOGO / NOME DA EMPRESA */
-    .header-logo,
-    .logo-area {
-        width: 100%;
-    }
-
-    .header-logo h1,
-    .logo-area h1 {
-        font-size: 18px;
-        line-height: 1.2;
-    }
-
-    /* MENU DE NAVEGAÇÃO */
-    .nav-links,
-    nav {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px 16px;
-        font-size: 14px;
-    }
-
-    .nav-links a,
-    nav a {
-        padding: 4px 0;
-    }
-
-    /* BOTÕES (Solicitar informações / Carrinho) */
-    .header-actions {
-        width: 100%;
-        display: flex;
-        gap: 8px;
-        justify-content: space-between;
-    }
-
-    .header-actions .btn-quote,
-    .header-actions .cart-button,
-    .btn-cart,
-    .btn-quote {
-        flex: 1;
-        text-align: center;
-        font-size: 14px;
-        padding: 10px 8px;
-    }
-
-    /* Dá um respiro entre o header e o conteúdo */
-    .hero,
-    .hero-section {
-        margin-top: 8px;
-    }
-   /* --- Ajustes de topo para CELULAR (até 768px) --- */
-@media (max-width: 768px) {
-
-  /* Evitar scroll lateral e zoom estranho */
+  /* Evitar rolagem lateral / zoom estranho */
   html, body {
     max-width: 100%;
     overflow-x: hidden;
   }
 
-  /* Container do topo (header) em COLUNA no mobile */
-  header .container,
-  .site-header .container,
-  .header-content {
+  /* Container principal do cabeçalho em COLUNA */
+  header .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
   }
 
+  /* LINHA 1 – Logo + textos da marca */
+  .logo-area,
+  .header-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
   /* Logo menor */
+  .logo-area img,
   .logo-luvig,
-  .header-logo img,
-  header img[alt*="LUVIG"] {
-    max-height: 32px;
+  .header-logo img {
+    max-height: 28px;
     width: auto;
   }
 
   /* Título LUVIG Serviços Especializados menor */
-  .header-title,
-  .header-brand,
+  .logo-text-title,
+  .header-brand h1,
   header h1 {
     font-size: 16px;
     line-height: 1.2;
   }
 
-  /* Subtítulo “14 anos em Governador Celso Ramos…” menor */
-  .header-subtitle,
-  .header-tagline,
+  /* Subtítulo “14 anos em Governador Celso Ramos” menor */
+  .logo-text-subtitle,
+  .header-brand small,
   header small {
-    font-size: 12px;
+    font-size: 11px;
   }
 
-  /* Menu de navegação em linha, mas com quebra */
-  header nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 14px;
-  }
-
-  header nav a {
-    font-size: 14px;
-  }
-
-  /* Botões Solicitar informações / Carrinho lado a lado e menores */
-  .header-actions,
-  .top-actions,
-  .header-buttons {
+  /* LINHA 2 – Botões Solicitar + Carrinho */
+  .header-actions {
     display: flex;
     width: 100%;
     gap: 8px;
-    justify-content: space-between;
   }
 
-  .header-actions .btn,
-  .header-actions button,
-  .btn-header,
+  .header-actions .btn-quote,
+  .header-actions .cart-button,
   .btn-quote,
   .btn-cart {
     flex: 1;
     padding: 8px 10px;
     font-size: 13px;
+    text-align: center;
+  }
+
+  /* LINHA 3 – Menu (Início / Serviços / Produtos / Sobre / Contato) */
+  header nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-top: 4px;
+  }
+
+  header nav a {
+    font-size: 14px;
+    padding: 2px 0;
   }
 }
-
-
-
 
 
 
