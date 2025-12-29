@@ -18,38 +18,40 @@
 <body>
 
   <!-- ================= HEADER ================= -->
-  <header class="site-header">
-    <div class="container">
-      <div class="header-inner">
-        <div class="logo-box">
-          <img src="Design_sem_nome__1_-removebg-preview (1).png" alt="LUVIG Serviços Especializados" class="logo-luvig" />
-          <div class="logo-text">
-            <span class="logo-title">LUVIG Serviços Especializados</span>
-            <span class="logo-subtitle">14 anos em Governador Celso Ramos</span>
-          </div>
-        </div>
-
-        <nav class="main-nav">
-          <a href="#inicio">Início</a>
-          <a href="#servicos">Serviços</a>
-          <a href="#produtos">Produtos</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#contato">Contato</a>
-        </nav>
-
-        <div class="header-actions">
-          <button class="btn-whats-header" id="btnAbrirOrcamentoServicos">
-            Solicitar informações
-          </button>
-
-          <button class="btn-cart" id="btnOpenCart">
-            Carrinho <span id="cartCount">0</span>
-          </button>
-        </div>
+  <header class="header">
+  <div class="container header-inner">
+    <!-- Logo + textos -->
+    <div class="logo-area">
+      <img src="logo-luvig.png" alt="LUVIG Serviços Especializados" class="logo-img">
+      <div class="logo-text">
+        <span class="logo-title">LUVIG</span>
+        <span class="logo-subtitle">Serviços Especializados</span>
+        <span class="logo-badge">14 anos em<br>Governador Celso Ramos</span>
       </div>
     </div>
-  </header>
 
+    <!-- Menu -->
+    <nav class="nav-links">
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <!-- Botões à direita -->
+    <div class="header-actions">
+      <button id="openLeadModal" class="btn-primary header-cta">
+        Solicitar informações
+      </button>
+
+      <button id="openCart" class="cart-button">
+        <span>Carrinho</span>
+        <span id="cart-count" class="cart-count">0</span>
+      </button>
+    </div>
+  </div>
+</header>
   <!-- ================= HERO ================= -->
   <section id="inicio" class="hero">
     <div class="container">
@@ -1745,5 +1747,6 @@ modalQuantity.value = 1;
   </script>
 </body>
 </html>
+
 
 
