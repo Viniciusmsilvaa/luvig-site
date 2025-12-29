@@ -1246,7 +1246,41 @@ button {
     .about-text {
         width: 100%;
     }
+
+   /* ===================== RESPONSIVO - MOBILE ===================== */
+@media (max-width: 768px){
+
+    .about-wrapper{
+        display: block !important;
+    }
+
+    /* Caixa azul do mapa */
+    .about-box {
+        width: 100% !important;
+        margin: 0 !important;
+        border-radius: 0px;
+    }
+
+    .about-box img{
+        width: 100%;
+        height: auto;
+    }
+
+    /* Caixa do texto Sobre a LUVIG */
+    .about-text {
+        width: 100% !important;
+        margin-top: 20px;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .about-text h2{
+        text-align: center;
+    }
+
+
 }
+
 
 
 
