@@ -863,7 +863,7 @@
     /* ==========================
        DADOS DOS PRODUTOS
     ========================== */
-    const products = {
+        const products = {
       "kit-teste": {
         id: "kit-teste",
         nome: "Kit teste cloro e pH BeL",
@@ -871,28 +871,104 @@
         categoria: "Verificar",
         imagens: ["kit teste.png"],
         variantes: [
-          { id: "1-unidade", label: "1 unidade", peso: "1 unidade", preco: 39.9 },
-          { id: "2-unidades", label: "2 unidades", peso: "2 unidades", preco: 69.9 }
+          {
+            id: "kit",
+            label: "Kit padrão",
+            peso: "1 medidor + 2 reagentes (23 ml)",
+            preco: 39.99
+          }
+        ]
+      },
+      barrilha: {
+        id: "barrilha",
+        nome: "Barrilha leve BeL",
+        descricao: "Produto utilizado para elevar o pH da água da piscina, corrigindo a acidez.",
+        categoria: "Ajustar",
+        imagens: ["barrilha leve.jpg"],
+        variantes: [
+          {
+            id: "2kg",
+            label: "2 kg",
+            peso: "2 kg",
+            preco: 36.99
+          }
+        ]
+      },
+      bicarbonato: {
+        id: "bicarbonato",
+        nome: "Bicarbonato de sódio BeL",
+        descricao: "Auxilia no aumento da alcalinidade total da água, ajudando a manter o pH estável.",
+        categoria: "Ajustar",
+        imagens: ["bircabonato de sódio.webp"],
+        variantes: [
+          {
+            id: "2kg",
+            label: "2 kg",
+            peso: "2 kg",
+            preco: 38.9
+          }
         ]
       },
       "cloro-granulado": {
         id: "cloro-granulado",
-        nome: "Cloro granulado BeL - Hipoclorito de Cálcio 65%",
-        descricao: "Cloro granulado para tratamento contínuo da água da piscina.",
+        nome: "Cloro granulado 65% BeL",
+        descricao: "Hipoclorito de cálcio 65% para desinfecção da água, ideal para o dia a dia da piscina.",
         categoria: "Purificar",
-        imagens: ["cloro 10kg.png"],
+        imagens: [
+          "cloro granulado 1kg.webp",
+          "cloro granulado 5g.webp",
+          "cloro granulado bel.jpg"
+        ],
         variantes: [
-          { id: "10kg", label: "10 kg", peso: "10 kg", preco: 409.99 }
+          {
+            id: "1kg",
+            label: "1 kg",
+            peso: "1 kg",
+            preco: 53.8
+          },
+          {
+            id: "5kg",
+            label: "5 kg",
+            peso: "5 kg",
+            preco: 219.99
+          },
+          {
+            id: "10kg",
+            label: "10 kg",
+            peso: "10 kg",
+            preco: 380.0
+          }
         ]
       },
       dicloro: {
         id: "dicloro",
-        nome: "Dicloro orgânico estabilizado 60% BeL",
-        descricao: "Cloro orgânico estabilizado para tratamento e manutenção da água.",
+        nome: "Dicloro orgânico estabilizado BeL",
+        descricao: "Cloro orgânico estabilizado que ajuda a manter o residual de cloro por mais tempo.",
         categoria: "Purificar",
-        imagens: ["dicloro 10kg.png"],
+        imagens: [
+          "dicloro orgãnico 1kg.webp",
+          "cloro organico 5kg.webp",
+          "DICLORO ORGANICO.jpg"
+        ],
         variantes: [
-          { id: "10kg", label: "10 kg", peso: "10 kg", preco: 469.9 }
+          {
+            id: "1kg",
+            label: "1 kg",
+            peso: "1 kg",
+            preco: 46.9
+          },
+          {
+            id: "5kg",
+            label: "5 kg",
+            peso: "5 kg",
+            preco: 159.99
+          },
+          {
+            id: "10kg",
+            label: "10 kg",
+            peso: "10 kg",
+            preco: 290.99
+          }
         ]
       },
       multicloro: {
@@ -904,76 +980,131 @@
           "multiação 1kg.webp",
           "multiação 2,5kg.webp",
           "multiação 5kg.png",
-          "MULTIAÇÃO 10 KG.png"
+          "MULTIAÇÃO CLORO.webp"
+
         ],
         variantes: [
-          { id: "1kg", label: "1 kg", peso: "1 kg", preco: 37.99 },
-          { id: "2-5kg", label: "2,5 kg", peso: "2,5 kg", preco: 84.99 },
-          { id: "5kg", label: "5 kg", peso: "5 kg", preco: 145.99 },
-          { id: "10kg", label: "10 kg", peso: "10 kg", preco: 260.99 }
+          {
+            id: "1kg",
+            label: "1 kg",
+            peso: "1 kg",
+            preco: 42.9
+          },
+          {
+            id: "2_5kg",
+            label: "2,5 kg",
+            peso: "2,5 kg",
+            preco: 78.9
+          },
+          {
+            id: "5kg",
+            label: "5 kg",
+            peso: "5 kg",
+            preco: 129.9
+          },
+          {
+            id: "10kg",
+            label: "10 kg",
+            peso: "10 kg",
+            preco: 235.99
+          }
+        ]
+      },
+      tablete: {
+        id: "tablete",
+        nome: "Multiação tablete de tricloro BeL",
+        descricao: "Tabletes de tricloro de ação contínua para dosagem em dosadores e skimmers.",
+        categoria: "Purificar",
+        imagens: ["MULTIAÇÃO TABLETE.png"],
+        variantes: [
+          {
+            id: "200g",
+            label: "200 g",
+            peso: "200 g",
+            preco: 11.39
+          }
         ]
       },
       algicida: {
         id: "algicida",
         nome: "Algicida BeL",
-        descricao: "Auxilia no combate e prevenção de algas na água da piscina.",
-        categoria: "Ajustar",
-        imagens: ["algicida 1l.jpg"],
+        descricao: "Auxilia na prevenção e combate de algas na piscina, mantendo a água cristalina.",
+        categoria: "Tratar",
+        imagens: ["ALGICIDA.webp", "algicida 5L.png"],
         variantes: [
-          { id: "1l", label: "1 L", peso: "1 L", preco: 29.9 }
+          {
+            id: "1L",
+            label: "1 L",
+            peso: "1 L",
+            preco: 30.79
+          },
+          {
+            id: "5L",
+            label: "5 L",
+            peso: "5 L",
+            preco: 109.9
+          }
         ]
       },
       clarificante: {
         id: "clarificante",
         nome: "Clarificante BeL",
-        descricao: "Ajuda a decantar as impurezas e deixar a água cristalina.",
-        categoria: "Ajustar",
-        imagens: ["clarificante 1l.jpg"],
+        descricao: "Ajuda na floculação e decantação das impurezas, deixando a água mais límpida.",
+        categoria: "Tratar",
+        imagens: ["CLARIFICANTE.jpg", "clarificante 5l.webp"],
         variantes: [
-          { id: "1l", label: "1 L", peso: "1 L", preco: 36.9 }
+          {
+            id: "1L",
+            label: "1 L",
+            peso: "1 L",
+            preco: 25.49
+          },
+          {
+            id: "5L",
+            label: "5 L",
+            peso: "5 L",
+            preco: 95.9
+          }
         ]
       },
       "limpa-bordas": {
         id: "limpa-bordas",
-        nome: "Limpa Bordas BeL",
-        descricao: "Remove oleosidade, gordura e sujeiras aderidas nas bordas da piscina.",
-        categoria: "Ajustar",
-        imagens: ["limpa bordas 1l.jpg"],
+        nome: "Limpa bordas BeL",
+        descricao: "Indicada para remoção de gorduras e sujeiras na linha d’água e bordas da piscina.",
+        categoria: "Tratar",
+        imagens: ["LIMPA BORDAS.png", "limpa borda 5l.png"],
         variantes: [
-          { id: "1l", label: "1 L", peso: "1 L", preco: 33.9 }
+          {
+            id: "1L",
+            label: "1 L",
+            peso: "1 L",
+            preco: 25.9
+          },
+          {
+            id: "5L",
+            label: "5 L",
+            peso: "5 L",
+            preco: 96.9
+          }
         ]
       },
-      "sulfato-aluminio": {
-        id: "sulfato-aluminio",
+      sulfato: {
+        id: "sulfato",
         nome: "Sulfato de alumínio BeL",
-        descricao: "Auxilia na correção da alcalinidade e na decantação de partículas em suspensão.",
-        categoria: "Ajustar",
-        imagens: ["sulfato de aluminio 10kg.jpg"],
+        descricao: "Floculante utilizado para auxiliar na decantação de partículas em suspensão na água.",
+        categoria: "Tratar",
+        imagens: ["SULFATO DE ÁLUMINIO.webp"],
         variantes: [
-          { id: "10kg", label: "10 kg", peso: "10 kg", preco: 119.9 }
-        ]
-      },
-      barrilha: {
-        id: "barrilha",
-        nome: "Barrilha leve BeL",
-        descricao: "Produto para ajuste de pH da água da piscina.",
-        categoria: "Ajustar",
-        imagens: ["barrilha leve.jpg"],
-        variantes: [
-          { id: "2kg", label: "2 kg", peso: "2 kg", preco: 36.99 }
-        ]
-      },
-      bicarbonato: {
-        id: "bicarbonato",
-        nome: "Bicarbonato de sódio BeL",
-        descricao: "Auxilia no aumento da alcalinidade total da água, ajudando a estabilizar o pH.",
-        categoria: "Ajustar",
-        imagens: ["bicarbonato 2kg.jpg"],
-        variantes: [
-          { id: "2kg", label: "2 kg", peso: "2 kg", preco: 39.99 }
+          {
+            id: "2kg",
+            label: "2 kg",
+            peso: "2 kg",
+            preco: 27.39
+          }
         ]
       }
     };
+
 
     /* ==========================
        ESTADO DO CARRINHO / CLIENTE
@@ -982,15 +1113,16 @@
     let currentProduct = null;
     let currentVariantId = null;
 
-    const cartCountEl = document.getElementById("cart-count");
+    const cartCountEl = document.getElementById("cartCount");
     const cartOverlay = document.getElementById("cartOverlay");
     const cartItemsEl = document.getElementById("cartItems");
     const cartTotalEl = document.getElementById("cartTotal");
     const floatingCartCount = document.getElementById("fabCartCount");
 
+
     // botões do cabeçalho
-    const btnOpenLead = document.getElementById("openLeadModal");
-    const btnOpenCart = document.getElementById("openCart");
+const btnOpenLead = document.getElementById("openLeadModal");
+const btnOpenCart = document.getElementById("openCart");
 
     const toast = document.getElementById("toast");
 
@@ -1000,26 +1132,25 @@
       setTimeout(() => toast.classList.remove("show"), 2200);
     }
 
-    function updateCartCount() {
-      const total = cart.reduce((sum, item) => sum + item.qtd, 0);
+   function updateCartCount() {
+  const total = cart.reduce((sum, item) => sum + item.qtd, 0);
 
-      // contador do cabeçalho
-      if (cartCountEl) {
-        cartCountEl.textContent = total;
-      }
+  // contador do cabeçalho
+  if (cartCountEl) {
+    cartCountEl.textContent = total;
+  }
 
-      // badge do botão flutuante (mobile)
-      if (floatingCartCount) {
-        floatingCartCount.textContent = total;
-      }
-    }
-
-    function rebuildCartUI() {
+  // badge do botão flutuante (mobile)
+  if (floatingCartCount) {
+    floatingCartCount.textContent = total;
+  }
+}
+   
+      function rebuildCartUI() {
       if (!cartItemsEl) return;
       cartItemsEl.innerHTML = "";
       if (cart.length === 0) {
-        cartItemsEl.innerHTML =
-          "<p style='font-size:13px;color:#6b7280;'>Seu carrinho está vazio.</p>";
+        cartItemsEl.innerHTML = "<p style='font-size:13px;color:#6b7280;'>Seu carrinho está vazio.</p>";
         cartTotalEl.textContent = "R$ 0,00";
         return;
       }
@@ -1027,214 +1158,353 @@
       let total = 0;
       cart.forEach((item, index) => {
         const li = document.createElement("div");
-        li.className = "cart-item";
+        li.className = "cart-item-row";
 
         const left = document.createElement("div");
-        left.className = "cart-item-left";
-
-        const title = document.createElement("div");
-        title.className = "cart-item-title";
-        title.textContent = item.nome;
-
-        const subtitle = document.createElement("div");
-        subtitle.className = "cart-item-subtitle";
-        subtitle.textContent = `${item.variacao} • ${item.peso}`;
-
-        left.appendChild(title);
-        left.appendChild(subtitle);
+        left.className = "cart-item-main";
+        left.innerHTML = `
+          <strong>${item.nome}</strong>
+          <span>${item.peso}</span>
+          <span>Qtd.: ${item.qtd}</span>
+        `;
 
         const right = document.createElement("div");
-        right.className = "cart-item-right";
-
-        const qtd = document.createElement("span");
-        qtd.className = "cart-item-qtd";
-        qtd.textContent = `${item.qtd}x`;
-
-        const price = document.createElement("span");
-        price.className = "cart-item-price";
-        price.textContent = formatPrice(item.preco * item.qtd);
-
-        const removeBtn = document.createElement("button");
-        removeBtn.className = "cart-item-remove";
-        removeBtn.textContent = "Remover";
-        removeBtn.addEventListener("click", () => {
-          cart.splice(index, 1);
-          rebuildCartUI();
-          updateCartCount();
-          showToast("Item removido do carrinho.");
-        });
-
-        right.appendChild(qtd);
-        right.appendChild(price);
-        right.appendChild(removeBtn);
+        const subtotal = item.preco * item.qtd;
+        total += subtotal;
+        right.innerHTML = `
+          <div>${formatPrice(item.preco)}</div>
+          <div style="font-weight:600;">${formatPrice(subtotal)}</div>
+          <button style="margin-top:4px;font-size:11px;border:none;background:#fee2e2;color:#991b1b;border-radius:999px;padding:2px 8px;cursor:pointer;" data-remove="${index}">
+            remover
+          </button>
+        `;
 
         li.appendChild(left);
         li.appendChild(right);
         cartItemsEl.appendChild(li);
-
-        total += item.preco * item.qtd;
       });
 
       cartTotalEl.textContent = formatPrice(total);
-    }
 
-    const openCartBtn = document.getElementById("openCart");
-    const openCartBtnMobile = document.getElementById("openCartMobile");
-
-    function abrirCarrinho() {
-      rebuildCartUI();
-      cartOverlay.classList.add("active");
-    }
-
-    [openCartBtn, openCartBtnMobile].forEach((btn) => {
-      if (btn) btn.addEventListener("click", abrirCarrinho);
-    });
-
-    const closeCartBtn = document.getElementById("cartClose");
-    const checkoutBtn = document.getElementById("checkoutConfirm");
-    const checkoutCancel = document.getElementById("checkoutCancel");
-
-    if (closeCartBtn) {
-      closeCartBtn.addEventListener("click", () => {
-        cartOverlay.classList.remove("active");
-      });
-    }
-
-    if (checkoutCancel) {
-      checkoutCancel.addEventListener("click", () => {
-        cartOverlay.classList.remove("active");
-      });
-    }
-
-    const cartOverlayBg = document.querySelector(".cart-overlay");
-    if (cartOverlayBg) {
-      cartOverlayBg.addEventListener("click", (e) => {
-        if (e.target === cartOverlayBg) {
-          cartOverlay.classList.remove("active");
-        }
-      });
-    }
-
-    if (checkoutBtn) {
-      checkoutBtn.addEventListener("click", () => {
-        if (cart.length === 0) {
-          showToast("Seu carrinho está vazio.");
-          return;
-        }
-
-        let resumo = "";
-        let total = 0;
-
-        cart.forEach((item, index) => {
-          resumo += `${index + 1}. ${item.nome} (${item.variacao}, ${
-            item.peso
-          }) - ${item.qtd}x ${formatPrice(item.preco)} = ${formatPrice(
-            item.preco * item.qtd
-          )}%0A`;
-          total += item.preco * item.qtd;
+      // botão remover
+      cartItemsEl.querySelectorAll("[data-remove]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const idx = parseInt(btn.getAttribute("data-remove"), 10);
+          cart.splice(idx, 1);
+          updateCartCount();
+          rebuildCartUI();
         });
-
-        resumo += `%0A*Total estimado:* ${formatPrice(total)}%0A`;
-
-        const mensagemWhatsapp =
-          "Olá, tudo bem? Gostaria de finalizar a compra dos produtos:%0A%0A" +
-          resumo +
-          "%0AFico no aguardo do retorno. Obrigado(a)!";
-
-        window.open(
-          `https://wa.me/5548996566764?text=${mensagemWhatsapp}`,
-          "_blank"
-        );
       });
     }
 
-    function addToCart(productId, variantId) {
+    /* ==========================
+       MODAL PRODUTO
+    ========================== */
+
+    const productModalOverlay = document.getElementById("productModalOverlay");
+    const modalProductImage = document.getElementById("modalProductImage");
+    const modalProductTitle = document.getElementById("modalProductTitle");
+    const modalProductDescription = document.getElementById("modalProductDescription");
+    const modalVariantBlock = document.getElementById("modalVariantBlock");
+    const modalVariantButtons = document.getElementById("modalVariantButtons");
+    const modalQuantity = document.getElementById("modalQuantity");
+    const modalTotal = document.getElementById("modalTotal");
+    const modalAddToCart = document.getElementById("modalAddToCart");
+
+    function openProductModal(productId) {
       const product = products[productId];
       if (!product) return;
 
-      const variant = product.variantes.find((v) => v.id === variantId);
-      if (!variant) return;
+      currentProduct = product;
+      currentVariantId = product.variantes[0]?.id || null;
 
-      const existing = cart.find(
-        (item) => item.id === productId && item.variantId === variantId
-      );
-      if (existing) {
-        existing.qtd += 1;
-      } else {
-        cart.push({
-          id: productId,
-          variantId: variantId,
-          nome: product.nome,
-          variacao: variant.label,
-          peso: variant.peso,
-          preco: variant.preco,
-          qtd: 1
+      // imagem principal (sempre primeira)
+      modalProductImage.src = product.imagens[0] || "";
+      modalProductImage.alt = product.nome;
+
+      modalProductTitle.textContent = product.nome;
+      modalProductDescription.textContent = product.descricao;
+
+      // variantes
+      modalVariantButtons.innerHTML = "";
+if (product.variantes.length > 1) {
+  modalVariantBlock.style.display = "block";
+
+  product.variantes.forEach((v, index) => {
+    const btn = document.createElement("button");
+    btn.className = "variant-btn";
+    if (v.id === currentVariantId) btn.classList.add("active");
+    btn.textContent = v.peso;
+    btn.dataset.variantId = v.id;
+
+    btn.addEventListener("click", () => {
+      currentVariantId = v.id;
+
+      // visual: marca o botão ativo
+      modalVariantButtons
+        .querySelectorAll(".variant-btn")
+        .forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      // foto correspondente à variante
+      const imgForVariant = product.imagens[index] || product.imagens[0];
+      modalProductImage.src = imgForVariant;
+
+      updateModalTotal();
+    });
+
+    modalVariantButtons.appendChild(btn);
+  });
+
+} else {
+  modalVariantBlock.style.display = "none";
+}
+
+modalQuantity.value = 1;
+      updateModalTotal();
+
+      productModalOverlay.classList.add("active");
+    }
+
+    function getSelectedVariant() {
+      if (!currentProduct) return null;
+      return currentProduct.variantes.find(v => v.id === currentVariantId) || currentProduct.variantes[0];
+    }
+
+    function updateModalTotal() {
+      const variant = getSelectedVariant();
+      if (!variant) {
+        modalTotal.textContent = "R$ 0,00";
+        return;
+      }
+      const qtd = Math.max(1, parseInt(modalQuantity.value || "1", 10));
+      modalQuantity.value = qtd;
+      const valor = variant.preco * qtd;
+      modalTotal.textContent = formatPrice(valor);
+    }
+
+    document.getElementById("productModalClose").addEventListener("click", () => {
+      productModalOverlay.classList.remove("active");
+    });
+
+    productModalOverlay.addEventListener("click", (e) => {
+      if (e.target === productModalOverlay) {
+        productModalOverlay.classList.remove("active");
+      }
+    });
+
+    modalQuantity.addEventListener("input", updateModalTotal);
+
+    modalAddToCart.addEventListener("click", () => {
+      const variant = getSelectedVariant();
+      if (!currentProduct || !variant) return;
+
+      const qtd = Math.max(1, parseInt(modalQuantity.value || "1", 10));
+
+      cart.push({
+        id: currentProduct.id,
+        nome: currentProduct.nome,
+        peso: variant.peso,
+        preco: variant.preco,
+        qtd
+      });
+
+      updateCartCount();
+      rebuildCartUI();
+      productModalOverlay.classList.remove("active");
+      showToast("Produto adicionado ao carrinho.");
+    });
+
+    // liga cards e botões ao modal
+    document.querySelectorAll(".product-main-click-area").forEach(el => {
+      el.addEventListener("click", () => {
+        const id = el.getAttribute("data-product-id");
+        openProductModal(id);
+      });
+    });
+
+    document.querySelectorAll("[data-add-to-cart]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-add-to-cart");
+        openProductModal(id);
+      });
+    });
+
+    /* ==========================
+   CARRINHO / CHECKOUT
+========================== */
+
+const openCartBtn = document.getElementById("openCart");        // botão do cabeçalho (desktop)
+const openCartBtnMobile = document.getElementById("openCartMobile"); // botão redondo (mobile)
+
+function abrirCarrinho() {
+  rebuildCartUI();
+  cartOverlay.classList.add("active");
+}
+
+[openCartBtn, openCartBtnMobile].forEach((btn) => {
+  if (btn) btn.addEventListener("click", abrirCarrinho);
+});
+    document.getElementById("cartClose").addEventListener("click", () => {
+      cartOverlay.classList.remove("active");
+    });
+
+    cartOverlay.addEventListener("click", (e) => {
+      if (e.target === cartOverlay) cartOverlay.classList.remove("active");
+    });
+
+    document.getElementById("btnContinueShopping").addEventListener("click", () => {
+      cartOverlay.classList.remove("active");
+      document.getElementById("produtos").scrollIntoView({ behavior: "smooth" });
+    });
+
+    const checkoutOverlay = document.getElementById("checkoutOverlay");
+
+    document.getElementById("btnCheckout").addEventListener("click", () => {
+      if (cart.length === 0) {
+        showToast("Seu carrinho está vazio.");
+        return;
+      }
+      checkoutOverlay.classList.add("active");
+    });
+
+    document.getElementById("checkoutClose").addEventListener("click", () => {
+      checkoutOverlay.classList.remove("active");
+    });
+
+    document.getElementById("checkoutCancel").addEventListener("click", () => {
+      checkoutOverlay.classList.remove("active");
+    });
+
+    checkoutOverlay.addEventListener("click", (e) => {
+      if (e.target === checkoutOverlay) checkoutOverlay.classList.remove("active");
+    });
+
+    document.getElementById("checkoutConfirm").addEventListener("click", () => {
+      const nome = document.getElementById("checkoutNome").value.trim();
+      const sobrenome = document.getElementById("checkoutSobrenome").value.trim();
+      const telefone = document.getElementById("checkoutTelefone").value.trim();
+      const email = document.getElementById("checkoutEmail").value.trim();
+      const endereco = document.getElementById("checkoutEndereco").value.trim();
+      const bairro = document.getElementById("checkoutBairro").value.trim();
+      const cidade = document.getElementById("checkoutCidade").value.trim();
+
+      if (!nome || !sobrenome || !telefone || !email || !endereco || !bairro || !cidade) {
+  showToast("Preencha todos os dados para finalizar o pedido.");
+  return;
+      }
+      let linhasProdutos = "";
+      cart.forEach(item => {
+        linhasProdutos += `${item.qtd}x ${item.nome} - ${item.peso} - ${formatPrice(item.preco)}%0A`;
+      });
+
+      const msg =
+        "Olá! gostaria de finalizar meu pedido que fiz no site da Luvig.%0A%0A" +
+        linhasProdutos +
+        "%0AGostaria de solicitar o orçamento! Desde já agradeço.%0A%0A" +
+        `Nome: ${nome} ${sobrenome}%0A` +
+        `Telefone: ${telefone}%0A` +
+        `Endereço: ${endereco}, Bairro ${bairro}, ${cidade} - SC`;
+
+      const whatsappNumero = "5548996566764"; // apenas WhatsApp
+      const url = `https://wa.me/${whatsappNumero}?text=${msg}`;
+      window.open(url, "_blank");
+
+      /* E-mail automático para o cliente com resumo */
+      const assunto = encodeURIComponent(`Recebemos seu pedido de orçamento, ${nome}! ✅`);
+      let corpo =
+        "LUVIG Serviços Gerais LTDA%0A%0A" +
+        `Olá, ${nome}.%0A%0A` +
+        "Confirmamos o recebimento da sua solicitação realizada através do nosso sistema.%0A" +
+        "Abaixo, listamos os detalhes do seu pedido para conferência:%0A%0A" +
+        "📋 Resumo da Solicitação:%0A%0A";
+
+      cart.forEach(item => {
+        corpo += `• ${item.qtd}x ${item.nome} - ${item.peso} (${formatPrice(item.preco)})%0A`;
+      });
+
+      corpo +=
+        "%0AA equipe da Luvig Serviços Gerais LTDA já está analisando esses itens.%0A%0A" +
+        "O que acontece agora? Nossa equipe entrará em contato com você diretamente pelo WhatsApp para confirmar " +
+        "a disponibilidade, passar os valores finais e fechar a proposta.%0A%0A" +
+        "ℹ️ Aviso Importante: Este é um e-mail automático apenas para registrar o recebimento do seu pedido. " +
+        "Por favor, não responda a esta mensagem. Todo o nosso atendimento humano seguirá exclusivamente pelo WhatsApp.%0A%0A" +
+        "Atenciosamente,%0AEquipe Luvig Serviços Gerais LTDA.";
+
+      window.open(`mailto:${encodeURIComponent(email)}?subject=${assunto}&body=${corpo}`, "_blank");
+
+      showToast("Pedido enviado para o WhatsApp.");
+      checkoutOverlay.classList.remove("active");
+    });
+
+    /* ==========================
+       TOPO – CARROSSEL HERO
+    ========================== */
+
+    (function initHeroSlider() {
+      const slides = Array.from(document.querySelectorAll("#heroSlider .hero-slide"));
+      const prev = document.getElementById("heroPrev");
+      const next = document.getElementById("heroNext");
+      if (slides.length === 0) return;
+
+      let idx = 0;
+
+      function showSlide(newIndex) {
+        slides.forEach(s => s.classList.remove("active"));
+        idx = (newIndex + slides.length) % slides.length;
+        slides[idx].classList.add("active");
+      }
+
+      prev.addEventListener("click", () => showSlide(idx - 1));
+      next.addEventListener("click", () => showSlide(idx + 1));
+
+      setInterval(() => showSlide(idx + 1), 7000);
+    })();
+
+    /* ==========================
+       CARROSSEL DENTRO DOS CARDS
+    ========================== */
+
+    function setupProductCardCarousel(productId) {
+      const wrapper = document.querySelector(`[data-carousel='${productId}']`);
+      if (!wrapper) return;
+
+      const imgs = Array.from(wrapper.querySelectorAll("img[data-variant-img]"));
+      if (imgs.length <= 1) return; // sem variação
+
+      let current = 0;
+
+      function showImage(newIndex, direction) {
+        imgs.forEach(img => {
+          img.classList.remove("active", "slide-in-left", "slide-in-right");
+        });
+
+        current = (newIndex + imgs.length) % imgs.length;
+        const img = imgs[current];
+        img.classList.add("active");
+        img.classList.add(direction === "left" ? "slide-in-left" : "slide-in-right");
+      }
+
+      const btnNext = wrapper.querySelector(`[data-carousel-next='${productId}']`);
+      const btnPrev = wrapper.querySelector(`[data-carousel-prev='${productId}']`);
+
+      if (btnNext) {
+        btnNext.addEventListener("click", (e) => {
+          e.stopPropagation();
+          showImage(current + 1, "right");
         });
       }
 
-      updateCartCount();
-      showToast("Produto adicionado ao carrinho.");
+      if (btnPrev) {
+        btnPrev.addEventListener("click", (e) => {
+          e.stopPropagation();
+          showImage(current - 1, "left");
+        });
+      }
+
+      // animação automática a cada 6 segundos
+      setInterval(() => showImage(current + 1, "right"), 6000);
     }
-
-    function attachProductCardEvents() {
-      document.querySelectorAll(".product-card").forEach((card) => {
-        const productId = card.dataset.productId;
-        const product = products[productId];
-        if (!product) return;
-
-        const selectVariant = card.querySelector(".product-variant-select");
-        const btnAddToCart = card.querySelector(".btn-add-to-cart");
-
-        if (selectVariant && btnAddToCart) {
-          selectVariant.innerHTML = "";
-          product.variantes.forEach((variant) => {
-            const option = document.createElement("option");
-            option.value = variant.id;
-            option.textContent = `${variant.label} – ${formatPrice(
-              variant.preco
-            )}`;
-            selectVariant.appendChild(option);
-          });
-
-          btnAddToCart.addEventListener("click", () => {
-            const selectedVariantId = selectVariant.value;
-            addToCart(productId, selectedVariantId);
-          });
-        }
-
-        const carouselTrack = card.querySelector(".product-card-carousel-track");
-        const prevBtn = card.querySelector(".product-card-carousel-prev");
-        const nextBtn = card.querySelector(".product-card-carousel-next");
-
-        if (carouselTrack && product.imagens.length > 1) {
-          let currentIndex = 0;
-          const imgs = carouselTrack.querySelectorAll("img");
-          function showImage(idx) {
-            imgs.forEach((img, i) => {
-              img.style.display = i === idx ? "block" : "none";
-            });
-          }
-          showImage(0);
-
-          if (prevBtn) {
-            prevBtn.addEventListener("click", () => {
-              currentIndex =
-                (currentIndex - 1 + product.imagens.length) %
-                product.imagens.length;
-              showImage(currentIndex);
-            });
-          }
-          if (nextBtn) {
-            nextBtn.addEventListener("click", () => {
-              currentIndex = (currentIndex + 1) % product.imagens.length;
-              showImage(currentIndex);
-            });
-          }
-        }
-      });
-    }
-
-    attachProductCardEvents();
 
     document.addEventListener("DOMContentLoaded", () => {
       [
@@ -1252,9 +1522,7 @@
     ========================== */
 
     const svcOverlay = document.getElementById("serviceModalOverlay");
-    const svcSteps = Array.from(
-      document.querySelectorAll(".service-modal-step")
-    );
+    const svcSteps = Array.from(document.querySelectorAll(".service-modal-step"));
     let svcStepAtual = 1;
 
     const svcState = {
@@ -1263,10 +1531,6 @@
       frequencia: "",
       cargaHoraria: "",
       exclusiva: "",
-      area: "",
-      areaExtras: "",
-      producao: "",
-      comentarios: "",
       nome: "",
       sobrenome: "",
       telefone: "",
@@ -1275,54 +1539,46 @@
     };
 
     function setSvcStep(step) {
-      svcStepAtual = step;
-      svcSteps.forEach((st) => {
-        st.classList.toggle(
-          "active",
-          Number(st.dataset.step) === svcStepAtual
-        );
-      });
+  svcStepAtual = step;
+  svcSteps.forEach(el => {
+    el.classList.toggle("active", parseInt(el.dataset.step, 10) === step);
+  });
+}
+
+function abrirSvcModal() {
+  if (!svcOverlay) return;
+  svcOverlay.classList.add("active");
+  setSvcStep(1);
+}
+
+function fecharSvcModal() {
+  if (!svcOverlay) return;
+  svcOverlay.classList.remove("active");
+}
+
+/* ===== BOTÕES QUE ABREM O MODAL (desktop + mobile) ===== */
+const btnSolicitarServico = document.getElementById("btnSolicitarServico");
+const btnSvcClose = document.getElementById("serviceModalClose");
+
+if (btnSolicitarServico) {
+  btnSolicitarServico.addEventListener("click", abrirSvcModal);
+}
+
+// botão X de fechar
+if (btnSvcClose) {
+  btnSvcClose.addEventListener("click", fecharSvcModal);
+}
+
+// clicar fora do conteúdo fecha também
+if (svcOverlay) {
+  svcOverlay.addEventListener("click", (e) => {
+    if (e.target === svcOverlay) {
+      fecharSvcModal();
     }
+  });
+}
 
-    function abrirSvcModal() {
-      if (!svcOverlay) return;
-      svcOverlay.classList.add("active");
-      setSvcStep(1);
-    }
-
-    function fecharSvcModal() {
-      if (!svcOverlay) return;
-      svcOverlay.classList.remove("active");
-    }
-
-    /* ===== BOTÕES QUE ABREM O MODAL (desktop + mobile) ===== */
-    const btnSolicitarServico = document.getElementById("btnSolicitarServico");
-    const btnOpenLeadMobile = document.getElementById("openLeadModalMobile");
-    const btnSvcClose = document.getElementById("serviceModalClose");
-
-    if (btnSolicitarServico) {
-      btnSolicitarServico.addEventListener("click", abrirSvcModal);
-    }
-
-    [btnOpenLead, btnOpenLeadMobile].forEach((btn) => {
-      if (btn) btn.addEventListener("click", abrirSvcModal);
-    });
-
-    if (btnSvcClose) {
-      btnSvcClose.addEventListener("click", fecharSvcModal);
-    }
-
-    if (svcOverlay) {
-      svcOverlay.addEventListener("click", (e) => {
-        if (e.target === svcOverlay) {
-          fecharSvcModal();
-        }
-      });
-    }
-
-    /* ==========================
-       PASSO 1 – tipo / modalidade
-    ========================== */
+    // PASSO 1 – tipo / modalidade
     const step1Next = document.getElementById("serviceStep1Next");
     const step1Cancel = document.getElementById("serviceStep1Cancel");
     const tipoGroup = document.getElementById("serviceTipo");
@@ -1333,17 +1589,14 @@
     const cargaSelect = document.getElementById("serviceCargaHoraria");
 
     function checkStep1Valid() {
-      const tipo = tipoGroup.querySelector(
-        "input[name='tipoServico']:checked"
-      );
-      const mod = modGroup.querySelector(
-        "input[name='modalidadeServico']:checked"
-      );
+      const tipo = tipoGroup.querySelector("input[name='tipoServico']:checked");
+      const mod = modGroup.querySelector("input[name='modalidadeServico']:checked");
       let ok = !!tipo && !!mod;
 
       const tipoVal = tipo ? tipo.value : "";
       const modVal = mod ? mod.value : "";
 
+      // mostrar frequência (para semanal / mensal)
       if (modVal === "Semanal" || modVal === "Mensal") {
         freqWrapper.style.display = "block";
         if (!freqInput.value) ok = false;
@@ -1352,10 +1605,8 @@
         freqInput.value = "";
       }
 
-      if (
-        tipoVal === "Limpeza predial" ||
-        tipoVal === "Serviços gerais em prédio"
-      ) {
+      // carga horária para limpeza predial / serviços gerais
+      if (tipoVal === "Limpeza predial" || tipoVal === "Serviços gerais em prédio") {
         cargaWrapper.style.display = "block";
         if (!cargaSelect.value) ok = false;
       } else {
@@ -1366,38 +1617,71 @@
       step1Next.disabled = !ok;
     }
 
-    ["change", "input"].forEach((evt) => {
-      tipoGroup.addEventListener(evt, checkStep1Valid);
-      modGroup.addEventListener(evt, checkStep1Valid);
-      freqInput.addEventListener(evt, checkStep1Valid);
-      cargaSelect.addEventListener(evt, checkStep1Valid);
-    });
+    tipoGroup.addEventListener("change", checkStep1Valid);
+    modGroup.addEventListener("change", checkStep1Valid);
+    freqInput.addEventListener("input", checkStep1Valid);
+    cargaSelect.addEventListener("change", checkStep1Valid);
 
     step1Next.addEventListener("click", () => {
-      const tipo = tipoGroup.querySelector(
-        "input[name='tipoServico']:checked"
-      );
-      const mod = modGroup.querySelector(
-        "input[name='modalidadeServico']:checked"
-      );
-
+      const tipo = tipoGroup.querySelector("input[name='tipoServico']:checked");
+      const mod = modGroup.querySelector("input[name='modalidadeServico']:checked");
       svcState.tipo = tipo ? tipo.value : "";
       svcState.modalidade = mod ? mod.value : "";
-      svcState.frequencia = freqInput.value.trim();
+      svcState.frequencia = freqInput.value;
       svcState.cargaHoraria = cargaSelect.value;
+
+      // montar pergunta exclusiva
+      const exclusiveDiv = document.getElementById("servicePerguntaExclusiva");
+      exclusiveDiv.innerHTML = "";
+      let label = "";
+      let hint = "";
+
+      switch (svcState.tipo) {
+        case "Limpeza de piscina":
+          label = "Tamanho da piscina e volume da água";
+          hint = "Informe em m² (área da piscina) e m³ (volume).";
+          break;
+        case "Limpeza predial":
+        case "Serviços gerais em prédio":
+          label = "Área do prédio e quantidade de andares";
+          hint = "Ex.: 1.200 m² e 8 andares.";
+          break;
+        case "Corte de grama":
+          label = "Tamanho aproximado do terreno para corte de grama";
+          hint = "Você pode informar em m² ou outra referência.";
+          break;
+        case "Jardim":
+          label = "Tamanho aproximado da área de jardim";
+          hint = "Informe em m² e se há canteiros, arbustos etc.";
+          break;
+        case "Limpeza de caixa d’água / cisterna":
+          label = "Volume da caixa d’água ou cisterna";
+          hint = "Informe em m³ ou litros.";
+          break;
+        default:
+          label = "Descreva o serviço que você precisa";
+          hint = "Inclua o máximo de detalhes possível.";
+      }
+
+      exclusiveDiv.innerHTML = `
+        <span class="service-field-label">${label}</span>
+        <textarea id="svcExclusiva" class="service-input" rows="3"></textarea>
+        <span class="service-hint">${hint}</span>
+      `;
+
+      document.getElementById("serviceStep2Next").disabled = true;
+
+      document.getElementById("svcExclusiva").addEventListener("input", () => {
+        const v = document.getElementById("svcExclusiva").value.trim();
+        document.getElementById("serviceStep2Next").disabled = !v;
+      });
 
       setSvcStep(2);
     });
 
-    step1Cancel.addEventListener("click", () => {
-      fecharSvcModal();
-    });
+    step1Cancel.addEventListener("click", fecharSvcModal);
 
-    checkStep1Valid();
-
-    /* ==========================
-       PASSO 2 – exclusividade do contrato
-    ========================== */
+    // PASSO 2
     const step2Next = document.getElementById("serviceStep2Next");
     const step2Back = document.getElementById("serviceStep2Back");
 
@@ -1411,20 +1695,14 @@
 
     step2Back.addEventListener("click", () => setSvcStep(1));
 
-    /* ==========================
-       PASSO 3 – dados do cliente
-    ========================== */
+    // PASSO 3
     const step3Next = document.getElementById("serviceStep3Next");
     const step3Back = document.getElementById("serviceStep3Back");
 
     function checkStep3Valid() {
       svcState.nome = document.getElementById("svcNome").value.trim();
-      svcState.sobrenome = document
-        .getElementById("svcSobrenome")
-        .value.trim();
-      svcState.telefone = document
-        .getElementById("svcTelefone")
-        .value.trim();
+      svcState.sobrenome = document.getElementById("svcSobrenome").value.trim();
+      svcState.telefone = document.getElementById("svcTelefone").value.trim();
       svcState.email = document.getElementById("svcEmail").value.trim();
       svcState.local = document.getElementById("svcLocal").value.trim();
 
@@ -1438,109 +1716,54 @@
       step3Next.disabled = !ok;
     }
 
-    ["input", "change"].forEach((evt) => {
-      ["svcNome", "svcSobrenome", "svcTelefone", "svcEmail", "svcLocal"].forEach(
-        (id) => {
-          const el = document.getElementById(id);
-          if (el) el.addEventListener(evt, checkStep3Valid);
-        }
-      );
+    ["svcNome", "svcSobrenome", "svcTelefone", "svcEmail", "svcLocal"].forEach(id => {
+      const el = document.getElementById(id);
+      el.addEventListener("input", checkStep3Valid);
     });
 
     step3Next.addEventListener("click", () => {
-      svcState.nome = document.getElementById("svcNome").value.trim();
-      svcState.sobrenome = document
-        .getElementById("svcSobrenome")
-        .value.trim();
-      svcState.telefone = document
-        .getElementById("svcTelefone")
-        .value.trim();
-      svcState.email = document.getElementById("svcEmail").value.trim();
-      svcState.local = document.getElementById("svcLocal").value.trim();
-
-      if (
-        !svcState.nome ||
-        !svcState.sobrenome ||
-        !svcState.telefone ||
-        !svcState.email ||
-        !svcState.local
-      ) {
-        return;
+      // monta resumo
+      const resumoEl = document.getElementById("serviceResumo");
+      let resumo = `Serviço: ${svcState.tipo}\n`;
+      resumo += `Modalidade: ${svcState.modalidade}`;
+      if (svcState.frequencia) {
+        resumo += ` - ${svcState.frequencia}x`;
       }
+      resumo += "\n";
+      if (svcState.cargaHoraria) {
+        resumo += `Carga horária: ${svcState.cargaHoraria}\n`;
+      }
+      resumo += `Detalhes do local/medidas: ${svcState.exclusiva}\n\n`;
+      resumo += `Nome: ${svcState.nome} ${svcState.sobrenome}\n`;
+      resumo += `Telefone/WhatsApp: ${svcState.telefone}\n`;
+      resumo += `E-mail: ${svcState.email}\n`;
+      resumo += `Local de atendimento: ${svcState.local}`;
+      resumoEl.textContent = resumo;
 
       setSvcStep(4);
-      montarResumoFinal();
     });
 
     step3Back.addEventListener("click", () => setSvcStep(2));
 
-    function montarResumoFinal() {
-      const resumoEl = document.getElementById("svcResumoFinal");
-      if (!resumoEl) return;
+    // PASSO 4
+    const step4Edit = document.getElementById("serviceStep4Edit");
+    const step4Enviar = document.getElementById("serviceStep4Enviar");
 
-      let resumo = "";
-      resumo += `• Tipo de serviço: ${svcState.tipo}%0A`;
-      resumo += `• Modalidade: ${svcState.modalidade}%0A`;
+    step4Edit.addEventListener("click", () => setSvcStep(1));
 
-      if (svcState.frequencia) {
-        resumo += `• Frequência: ${svcState.frequencia}%0A`;
-      }
-      if (svcState.cargaHoraria) {
-        resumo += `• Carga horária (serviços em prédio): ${svcState.cargaHoraria}%0A`;
-      }
-      if (svcState.exclusiva) {
-        resumo += `• Exclusividade / condições especiais: ${svcState.exclusiva}%0A`;
-      }
+    step4Enviar.addEventListener("click", () => {
+      const resumo = document.getElementById("serviceResumo").textContent;
 
-      resumo += "%0A📍 Local de atendimento:%0A";
-      resumo += `${svcState.local}%0A%0A`;
+      const msg =
+        "Olá, gostaria de solicitar um orçamento! Seguem os dados abaixo:%0A%0A" +
+        encodeURIComponent(resumo).replace(/%0A/g, "%0A");
 
-      resumo += "👤 Dados do responsável:%0A";
-      resumo += `${svcState.nome} ${svcState.sobrenome}%0A`;
-      resumo += `Telefone / WhatsApp: ${svcState.telefone}%0A`;
-      resumo += `E-mail: ${svcState.email}%0A`;
+      const whatsappNumero = "5548996566764";
+      const url = `https://wa.me/${whatsappNumero}?text=${msg}`;
+      window.open(url, "_blank");
 
-      resumoEl.textContent = decodeURIComponent(resumo.replace(/%0A/g, "\n"));
-    }
-
-    /* ==========================
-       PASSO 4 – envio da solicitação
-    ========================== */
-    const step4Finish = document.getElementById("serviceStep4Finish");
-
-    step4Finish.addEventListener("click", () => {
-      let resumo = "";
-      resumo += `• Tipo de serviço: ${svcState.tipo}%0A`;
-      resumo += `• Modalidade: ${svcState.modalidade}%0A`;
-      if (svcState.frequencia) {
-        resumo += `• Frequência: ${svcState.frequencia}%0A`;
-      }
-      if (svcState.cargaHoraria) {
-        resumo += `• Carga horária (serviços em prédio): ${svcState.cargaHoraria}%0A`;
-      }
-      if (svcState.exclusiva) {
-        resumo += `• Exclusividade / condições especiais: ${svcState.exclusiva}%0A`;
-      }
-
-      resumo += "%0A📍 Local de atendimento:%0A";
-      resumo += `${svcState.local}%0A%0A`;
-
-      resumo += "👤 Dados do responsável:%0A";
-      resumo += `${svcState.nome} ${svcState.sobrenome}%0A`;
-      resumo += `Telefone / WhatsApp: ${svcState.telefone}%0A`;
-      resumo += `E-mail: ${svcState.email}%0A`;
-
-      const mensagemWhatsapp =
-        "Olá, tudo bem? Gostaria de solicitar um orçamento de serviços:%0A%0A" +
-        resumo +
-        "%0AFico no aguardo do retorno. Obrigado(a)!";
-
-      window.open(
-        `https://wa.me/5548996566764?text=${mensagemWhatsapp}`,
-        "_blank"
-      );
-
-      const assunto = "Confirmação de solicitação de orçamento - LUVIG Serviços";
+      // e-mail automático para o cliente
+      const assunto = encodeURIComponent(`Recebemos seu pedido de orçamento, ${svcState.nome}! ✅`);
       let corpo =
         "LUVIG Serviços Gerais LTDA%0A%0A" +
         `Olá, ${svcState.nome}.%0A%0A` +
@@ -1555,20 +1778,18 @@
         "Por favor, não responda a esta mensagem. Todo o nosso atendimento humano seguirá exclusivamente pelo WhatsApp.%0A%0A" +
         "Atenciosamente,%0AEquipe Luvig Serviços Gerais LTDA.";
 
-      window.open(
-        `mailto:${encodeURIComponent(
-          svcState.email
-        )}?subject=${assunto}&body=${corpo}`,
-        "_blank"
-      );
+      window.open(`mailto:${encodeURIComponent(svcState.email)}?subject=${assunto}&body=${corpo}`, "_blank");
 
       showToast("Solicitação enviada para o WhatsApp.");
       fecharSvcModal();
     });
 
+        // =========================
     // BOTÕES FLUTUANTES MOBILE
+    // =========================
+
     const floatingWhatsBtn = document.getElementById("fabWhats");
-    const floatingCartBtn = document.getElementById("fabCart");
+    const floatingCartBtn  = document.getElementById("fabCart");
 
     // Whats abre o MESMO modal de orçamento de serviços
     if (floatingWhatsBtn) {
@@ -1582,40 +1803,11 @@
       floatingCartBtn.addEventListener("click", () => {
         abrirCarrinho();
       });
-
-      // =========================
-// BOTÕES FLUTUANTES MOBILE
-// =========================
-
-// pega os botões flutuantes
-const floatingWhatsBtn = document.getElementById("fabWhats");
-const floatingCartBtn  = document.getElementById("fabCart");
-
-// garante que funções existem antes de usar
-function safeAbrirServico() {
-  if (typeof abrirSvcModal === "function") {
-    abrirSvcModal();
-  }
-}
-
-function safeAbrirCarrinho() {
-  if (typeof abrirCarrinho === "function") {
-    abrirCarrinho();
-  }
-}
-
-// Whats abre orçamento
-if (floatingWhatsBtn) {
-  floatingWhatsBtn.addEventListener("click", safeAbrirServico);
-}
-
-// Carrinho abre carrinho
-if (floatingCartBtn) {
-  floatingCartBtn.addEventListener("click", safeAbrirCarrinho);
-}
     }
   </script>
-        <!-- BOTÕES FLUTUANTES – SOMENTE MOBILE -->
+
+
+    <!-- BOTÕES FLUTUANTES – SOMENTE MOBILE -->
   <div class="floating-actions">
     <!-- Botão Whats / Orçamento -->
     <button type="button" class="fab fab-whats" id="fabWhats">
