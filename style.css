@@ -215,6 +215,51 @@ button {
   position: relative;
   padding-bottom: 4px;
 }
+  /* HERO EM UMA COLUNA NO MOBILE */
+  .hero {
+    padding: 28px 0 36px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero-content h1 {
+    font-size: 22px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  /* opcional: visual do hero vai para baixo do texto */
+  .hero-visual {
+    order: 2;
+    margin-top: 8px;
+  }
+
+  /* SERVIÇOS: 1 card por linha */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* PRODUTOS: 2 cards por linha no mobile */
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* SOBRE: já tem @media próprio a 900px,
+     aqui só garantimos que não estoure a largura */
+  .about-section {
+    padding: 40px 0;
+  }
+
+  /* CONTATO: empilhar blocos */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
 
 .nav-links a::after {
   content: "";
@@ -646,7 +691,7 @@ button {
 
 .about-section {
   padding: 60px 0;
-  background: #bfbfbf; /* cinza de fundo do exemplo */
+  background: #bfbfbf; /* fundo cinza igual ao exemplo */
 }
 
 .about-wrapper {
@@ -661,7 +706,7 @@ button {
 
 /* CARD BASE AZUL */
 .about-card {
-  background: #1d13d8; /* se quiser, use var(--blue); */
+  background: #1d13d8; /* se quiser, pode usar var(--blue) */
   border-radius: 40px;
   padding: 32px;
   color: #ffffff;
@@ -719,7 +764,7 @@ button {
   margin-bottom: 12px;
 }
 
-/* RESPONSIVO */
+/* RESPONSIVO – EMPILHA OS CARDS NO MOBILE */
 @media (max-width: 900px) {
   .about-wrapper {
     grid-template-columns: 1fr;
@@ -736,6 +781,7 @@ button {
     border-radius: 32px 32px 0 0;
   }
 }
+
 
 /* =========================
    CONTATO
@@ -1427,5 +1473,166 @@ button {
     margin: -24px -24px 12px;
     border-radius: 32px 32px 0 0;
   }
+
+  /* =========================
+   BOTÕES FLUTUANTES MOBILE
+========================= */
+
+.floating-actions {
+  display: none; /* some por padrão, só aparece no mobile */
+}
+
+.fab {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35);
+  cursor: pointer;
+}
+
+.fab img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.fab-whats {
+  background: #22c55e;
+}
+
+.fab-cart {
+  background: #111827;
+  color: #ffffff;
+  font-size: 26px;
+}
+/* =========================
+   AJUSTES FINAIS – MOBILE
+========================= */
+@media (max-width: 768px) {
+  /* Cabeçalho: logo centralizada e sem botões de texto */
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .logo-area {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .header-actions {
+    display: none; /* esconde os botões "Solicitar informações" e "Carrinho" no topo */
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+
+  /* Hero: carrossel primeiro, texto depois */
+  .hero-inner {
+    padding-top: 18px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hero-visual {
+    order: 1;
+    margin: 0 -12px;          /* carrossel ocupa quase toda a largura */
+  }
+
+  .hero-slider {
+    height: 220px;
+    border-radius: 18px;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+    max-width: none;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  /* Botões "Ver produtos BeL" e "Ver serviços LUVIG" lado a lado */
+  .hero-actions {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    flex: 1 1 48%;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  /* Balões de +14 anos / Atendimento / Produtos BeL – cada um em uma linha */
+  .hero-badges {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-badges span {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Produtos – layout mais folgado */
+  .products-section {
+    padding-top: 32px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 colunas padrão no mobile */
+    column-gap: 12px;
+  }
+
+  /* PRIMEIRO grupo (Verificar – Kit teste) ocupa a linha inteira */
+  .product-group:first-of-type .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    min-width: 0;
+  }
+
+  .product-image-carousel {
+    height: 140px;
+  }
+
+  /* Botões flutuantes no rodapé */
+  .floating-actions {
+    display: flex;
+    position: fixed;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    padding: 0 16px;
+    justify-content: space-between;
+    z-index: 120;
+    pointer-events: none; /* o container não bloqueia clique no conteúdo */
+  }
+
+  .floating-actions .fab {
+    pointer-events: auto; /* mas os botões aceitam clique */
+  }
+}
+
 }
 }

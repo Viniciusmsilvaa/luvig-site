@@ -1316,17 +1316,20 @@ modalQuantity.value = 1;
     });
 
     /* ==========================
-       CARRINHO / CHECKOUT
-    ========================== */
+   CARRINHO / CHECKOUT
+========================== */
 
-    const openCartBtn = document.getElementById("openCart");
-if (openCartBtn) {
-  openCartBtn.addEventListener("click", () => {
-    rebuildCartUI();
-    cartOverlay.classList.add("active");
-  });
+const openCartBtn = document.getElementById("openCart");        // botão do cabeçalho (desktop)
+const openCartBtnMobile = document.getElementById("openCartMobile"); // botão redondo (mobile)
+
+function abrirCarrinho() {
+  rebuildCartUI();
+  cartOverlay.classList.add("active");
 }
 
+[openCartBtn, openCartBtnMobile].forEach((btn) => {
+  if (btn) btn.addEventListener("click", abrirCarrinho);
+});
     document.getElementById("cartClose").addEventListener("click", () => {
       cartOverlay.classList.remove("active");
     });
@@ -1539,33 +1542,18 @@ function fecharSvcModal() {
   svcOverlay.classList.remove("active");
 }
 
-/* ===== BOTÕES QUE ABREM O MODAL ===== */
+/* ===== BOTÕES QUE ABREM O MODAL (desktop + mobile) ===== */
 const btnSolicitarServico = document.getElementById("btnSolicitarServico");
-const btnOpenLead = document.getElementById("openLeadModal"); // botão ao lado do carrinho
+const btnOpenLead = document.getElementById("openLeadModal");           // botão do cabeçalho (desktop)
+const btnOpenLeadMobile = document.getElementById("openLeadModalMobile"); // botão redondo (mobile)
 
 if (btnSolicitarServico) {
   btnSolicitarServico.addEventListener("click", abrirSvcModal);
 }
 
-if (btnOpenLead) {
-  btnOpenLead.addEventListener("click", abrirSvcModal);
-}
-
-/* ===== BOTÃO X (FECHAR) ===== */
-const btnSvcClose = document.getElementById("serviceModalClose");
-if (btnSvcClose) {
-  btnSvcClose.addEventListener("click", fecharSvcModal);
-}
-
-/* ===== CLIQUE FORA DO MODAL FECHA ===== */
-if (svcOverlay) {
-  svcOverlay.addEventListener("click", (e) => {
-    if (e.target === svcOverlay) {
-      fecharSvcModal();
-    }
-  });
-}
-
+[btnOpenLead, btnOpenLeadMobile].forEach((btn) => {
+  if (btn) btn.addEventListener("click", abrirSvcModal);
+});
     // PASSO 1 – tipo / modalidade
     const step1Next = document.getElementById("serviceStep1Next");
     const step1Cancel = document.getElementById("serviceStep1Cancel");
@@ -1772,8 +1760,30 @@ if (svcOverlay) {
       fecharSvcModal();
     });
   </script>
+<  <!-- ===== BOTÕES FLUTUANTES – APENAS MOBILE ===== -->
+  <div class="floating-actions">
+    <!-- Whats / solicitar informações -->
+    <button
+      class="fab fab-whats"
+      id="openLeadModalMobile"
+      aria-label="Solicitar informações pelo WhatsApp"
+      type="button"
+    >
+      <img src="whats_logo-removebg-preview.png" alt="WhatsApp LUVIG">
+    </button>
+
+    <!-- Carrinho -->
+    <button
+      class="fab fab-cart"
+      id="openCartMobile"
+      aria-label="Abrir carrinho"
+      type="button"
+    >
+      🛒
+    </button>
+  </div>
 </body>
-</html>
+
 
 
 
