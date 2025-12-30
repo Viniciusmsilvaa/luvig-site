@@ -1122,12 +1122,6 @@
 const btnOpenLead = document.getElementById("openLeadModal");
 const btnOpenCart = document.getElementById("openCart");
 
-// botões flutuantes (mobile)
-const floatingWhatsBtn = document.getElementById("fabWhats");
-const floatingCartBtn = document.getElementById("fabCart");
-const floatingCartCount = document.getElementById("fabCartCount");
-
-
     const toast = document.getElementById("toast");
 
     function showToast(message) {
@@ -1340,6 +1334,7 @@ modalQuantity.value = 1;
 
 const openCartBtn = document.getElementById("openCart");        // botão do cabeçalho (desktop)
 const openCartBtnMobile = document.getElementById("openCartMobile"); // botão redondo (mobile)
+
 function abrirCarrinho() {
   rebuildCartUI();
   cartOverlay.classList.add("active");
