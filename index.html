@@ -1582,6 +1582,37 @@
       floatingCartBtn.addEventListener("click", () => {
         abrirCarrinho();
       });
+
+      // =========================
+// BOTÕES FLUTUANTES MOBILE
+// =========================
+
+// pega os botões flutuantes
+const floatingWhatsBtn = document.getElementById("fabWhats");
+const floatingCartBtn  = document.getElementById("fabCart");
+
+// garante que funções existem antes de usar
+function safeAbrirServico() {
+  if (typeof abrirSvcModal === "function") {
+    abrirSvcModal();
+  }
+}
+
+function safeAbrirCarrinho() {
+  if (typeof abrirCarrinho === "function") {
+    abrirCarrinho();
+  }
+}
+
+// Whats abre orçamento
+if (floatingWhatsBtn) {
+  floatingWhatsBtn.addEventListener("click", safeAbrirServico);
+}
+
+// Carrinho abre carrinho
+if (floatingCartBtn) {
+  floatingCartBtn.addEventListener("click", safeAbrirCarrinho);
+}
     }
   </script>
         <!-- BOTÕES FLUTUANTES – SOMENTE MOBILE -->
