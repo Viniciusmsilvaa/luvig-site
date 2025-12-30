@@ -1651,6 +1651,17 @@ button {
   }
 }}
 }
+@media (max-width: 768px) {
+  /* Centralizar texto da marca abaixo da logo no mobile */
+  .logo-area {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo-text {
+    text-align: center;
+  }
+}
 
 
 

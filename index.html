@@ -1117,6 +1117,8 @@
     const cartOverlay = document.getElementById("cartOverlay");
     const cartItemsEl = document.getElementById("cartItems");
     const cartTotalEl = document.getElementById("cartTotal");
+    const floatingCartCount = document.getElementById("fabCartCount");
+
 
     // botões do cabeçalho
 const btnOpenLead = document.getElementById("openLeadModal");
@@ -1555,29 +1557,27 @@ function fecharSvcModal() {
 }
 
 /* ===== BOTÕES QUE ABREM O MODAL (desktop + mobile) ===== */
-const btnSolicitarServico = document.getElementById("btnSolicitarServico");     
-const btnOpenLeadMobile = document.getElementById("openLeadModalMobile"); // botão redondo (mobile)
+const btnSolicitarServico = document.getElementById("btnSolicitarServico");
+const btnSvcClose = document.getElementById("serviceModalClose");
 
 if (btnSolicitarServico) {
   btnSolicitarServico.addEventListener("click", abrirSvcModal);
 }
 
-[btnOpenLead, btnOpenLeadMobile].forEach((btn) => {
-  if (btn) btn.addEventListener("click", abrirSvcModal);
-});
-
-const btnSvcclose = document.getElementByid("serviceModalClose");
+// botão X de fechar
 if (btnSvcClose) {
   btnSvcClose.addEventListener("click", fecharSvcModal);
 }
 
-if (svcOverlay){
+// clicar fora do conteúdo fecha também
+if (svcOverlay) {
   svcOverlay.addEventListener("click", (e) => {
     if (e.target === svcOverlay) {
       fecharSvcModal();
     }
   });
 }
+
     // PASSO 1 – tipo / modalidade
     const step1Next = document.getElementById("serviceStep1Next");
     const step1Cancel = document.getElementById("serviceStep1Cancel");
@@ -1784,46 +1784,28 @@ if (svcOverlay){
       fecharSvcModal();
     });
 
-    // Quando clicar no botão flutuante do Whats, faz a mesma ação do "Solicitar informações" do header
-if (floatingWhatsBtn && btnOpenLead) {
-  floatingWhatsBtn.addEventListener("click", () => {
-    btnOpenLead.click();
-  });
-}
+        // =========================
+    // BOTÕES FLUTUANTES MOBILE
+    // =========================
 
-// Quando clicar no botão flutuante do carrinho, faz a mesma ação do ícone de carrinho do header
-if (floatingCartBtn && btnOpenCart) {
-  floatingCartBtn.addEventListener("click", () => {
-    btnOpenCart.click();
-  });
-  // =========================
-// BOTÕES FLUTUANTES MOBILE
-// =========================
+    const floatingWhatsBtn = document.getElementById("fabWhats");
+    const floatingCartBtn  = document.getElementById("fabCart");
 
-// pega os botões
-const floatingWhatsBtn = document.getElementById("fabWhats");
-const floatingCartBtn  = document.getElementById("fabCart");
+    // Whats abre o MESMO modal de orçamento de serviços
+    if (floatingWhatsBtn) {
+      floatingWhatsBtn.addEventListener("click", () => {
+        abrirSvcModal();
+      });
+    }
 
-// pega os mesmos botões do header
-const btnOpenLead = document.getElementById("openLeadModal");
-const btnOpenCart = document.getElementById("openCart");
+    // Carrinho abre o mesmo carrinho lateral
+    if (floatingCartBtn) {
+      floatingCartBtn.addEventListener("click", () => {
+        abrirCarrinho();
+      });
+    }
+  </script>
 
-// Whats abre modal de orçamento
-if (floatingWhatsBtn && btnOpenLead) {
-  floatingWhatsBtn.addEventListener("click", () => {
-    btnOpenLead.click();
-  });
-}
-
-// Carrinho abre carrinho
-if (floatingCartBtn && btnOpenCart) {
-  floatingCartBtn.addEventListener("click", () => {
-    btnOpenCart.click();
-  });
-}
-
-}
- </script>
 
     <!-- BOTÕES FLUTUANTES – SOMENTE MOBILE -->
   <div class="floating-actions">
