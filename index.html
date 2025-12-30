@@ -1565,6 +1565,19 @@ if (btnSolicitarServico) {
 [btnOpenLead, btnOpenLeadMobile].forEach((btn) => {
   if (btn) btn.addEventListener("click", abrirSvcModal);
 });
+
+const btnSvcclose = document.getElementByid("serviceModalClose");
+if (btnSvcClose) {
+  btnSvcClose.addEventListener("click", fecharSvcModal);
+}
+
+if (svcOverlay){
+  svcOverlay.addEventListener("click", (e) => {
+    if (e.target === svcOverlay) {
+      fecharSvcModal();
+    }
+  });
+}
     // PASSO 1 – tipo / modalidade
     const step1Next = document.getElementById("serviceStep1Next");
     const step1Cancel = document.getElementById("serviceStep1Cancel");
@@ -1783,6 +1796,32 @@ if (floatingCartBtn && btnOpenCart) {
   floatingCartBtn.addEventListener("click", () => {
     btnOpenCart.click();
   });
+  // =========================
+// BOTÕES FLUTUANTES MOBILE
+// =========================
+
+// pega os botões
+const floatingWhatsBtn = document.getElementById("fabWhats");
+const floatingCartBtn  = document.getElementById("fabCart");
+
+// pega os mesmos botões do header
+const btnOpenLead = document.getElementById("openLeadModal");
+const btnOpenCart = document.getElementById("openCart");
+
+// Whats abre modal de orçamento
+if (floatingWhatsBtn && btnOpenLead) {
+  floatingWhatsBtn.addEventListener("click", () => {
+    btnOpenLead.click();
+  });
+}
+
+// Carrinho abre carrinho
+if (floatingCartBtn && btnOpenCart) {
+  floatingCartBtn.addEventListener("click", () => {
+    btnOpenCart.click();
+  });
+}
+
 }
  </script>
 
@@ -1795,7 +1834,7 @@ if (floatingCartBtn && btnOpenCart) {
 
     <!-- Botão Carrinho -->
     <button type="button" class="fab fab-cart" id="fabCart">
-      <img src="icon-carrinho.png" alt="Carrinho LUVIG">
+      <img src="ícone-do-vetor-carrinho-de-compras-isolado-no-fundo-transparente-li-130114699.webp" alt="Carrinho LUVIG">
       <span class="fab-cart-count" id="fabCartCount">0</span>
     </button>
   </div>
