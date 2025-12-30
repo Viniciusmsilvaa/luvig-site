@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <head>
+   <head>
     <meta charset="UTF-8">
     <!-- ADICIONE ESTA LINHA LOGO ABAIXO DO charset -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="LUVIG Serviços Gerais – limpeza de piscina, limpeza predial, corte de grama e venda de produtos BeL Piscinas em Governador Celso Ramos – SC.">
 
     <title>LUVIG Serviços Gerais – Limpeza & Produtos BeL Piscinas</title>
     <link rel="stylesheet" href="style.css">
@@ -22,7 +21,7 @@
   <div class="container header-inner">
     <!-- Logo + textos -->
     <div class="logo-area">
-      <img src="logo-luvig.png" alt="LUVIG Serviços Especializados" class="logo-img">
+      <img src="Design_sem_nome__1_-removebg-preview (1).png" alt="LUVIG Serviços Especializados" class="logo-img">
       <div class="logo-text">
         <span class="logo-title">LUVIG</span>
         <span class="logo-subtitle">Serviços Especializados</span>
@@ -441,60 +440,63 @@
   </section>
 
   <!-- ================= SOBRE ================= -->
-  <section id="sobre" class="about-section">
+<section id="sobre" class="about-section">
+  <div class="about-wrapper">
 
-  <div class="about-grid">
-
-      <!-- BLOCO MAPA + LOCALIZAÇÃO -->
-      <div class="about-box left-box">
-          <img src="gps localização.png" alt="Localização LUVIG" class="about-map-img">
-
-          <div class="about-location-text">
-              <h2>Sobre a Localização</h2>
-              <p>
-                  Nossa sede está localizada estrategicamente em Palmas – Governador Celso Ramos,
-                  garantindo agilidade no atendimento aos clientes da região e proximidade com os
-                  principais condomínios e residências atendidos diariamente pela nossa equipe.
-              </p>
-
-              <p>
-                  Avenida Augusto Prolik, nº 984, sala 2 – Bairro Palmas – CEP 88191-340<br>
-                  Governador Celso Ramos – SC
-              </p>
-          </div>
+    <!-- CARD ESQUERDO: MAPA + LOCALIZAÇÃO -->
+    <div class="about-card about-card-location">
+      <div class="about-map-wrapper">
+        <img
+          src="gps localização.png"
+          alt="Localização LUVIG"
+          class="about-map"
+        />
       </div>
 
+      <div class="about-location-text">
+        <h3>Sobre a Localização</h3>
+        <p>
+          Nossa sede está localizada estrategicamente em Palmas – Governador Celso Ramos,
+          garantindo agilidade no atendimento aos clientes da região e proximidade com os
+          principais condomínios e residências atendidos diariamente pela nossa equipe.
+        </p>
 
-      <!-- BLOCO SOBRE A EMPRESA -->
-      <div class="about-box right-box">
-          <h2>Sobre a LUVIG</h2>
-
-          <p>
-              Com mais de 14 anos de atuação, a LUVIG Serviços Gerais LTDA nasceu da força de vontade,
-              dedicação e visão empreendedora de Luciano e Girlane. Antes de consolidar a empresa, ambos
-              já administraram a tradicional sorveteria Doce Sabor, muito conhecida em Palmas.
-          </p>
-
-          <p>
-              A ideia de criar a LUVIG surgiu quando Luciano começou a realizar serviços extras de limpeza
-              de piscinas para amigos. A qualidade do trabalho fez a procura crescer naturalmente,
-              permitindo a expansão para serviços de limpeza predial, jardinagem e manutenção de áreas comuns.
-          </p>
-
-          <p>
-              Hoje, além dos serviços, a LUVIG também oferece a linha completa de produtos BeL Piscinas,
-              unindo experiência prática, suporte técnico e soluções profissionais para quem busca
-              segurança, eficiência e resultado.
-          </p>
-
-          <p>
-              Seguimos evoluindo e ampliando nossos serviços, sempre com compromisso, seriedade e amor
-              pelo que fazemos.
-          </p>
+        <p>
+          Avenida Augusto Prolik, nº 984, sala 2 – Bairro Palmas – CEP 88191-340<br />
+          Governador Celso Ramos – SC
+        </p>
       </div>
+    </div>
+
+    <!-- CARD DIREITO: SOBRE A LUVIG -->
+    <div class="about-card about-card-sobre">
+      <h2 class="about-title">Sobre a LUVIG</h2>
+
+      <p class="about-text">
+        Com mais de 14 anos de atuação, a LUVIG Serviços Gerais LTDA nasceu da força de vontade,
+        dedicação e visão empreendedora de Luciano e Girlane. Antes de consolidar a empresa, ambos
+        já administraram a tradicional sorveteria Doce Sabor, muito conhecida em Palmas.
+      </p>
+
+      <p class="about-text">
+        A ideia de criar a LUVIG surgiu quando Luciano começou a realizar serviços extras de limpeza
+        de piscinas para amigos. A qualidade do trabalho fez a procura crescer naturalmente,
+        permitindo a expansão para serviços de limpeza predial, jardinagem e manutenção de áreas comuns.
+      </p>
+
+      <p class="about-text">
+        Hoje, além dos serviços, a LUVIG também oferece a linha completa de produtos BeL Piscinas,
+        unindo experiência prática, suporte técnico e soluções profissionais para quem busca
+        segurança, eficiência e resultado.
+      </p>
+
+      <p class="about-text">
+        Seguimos evoluindo e ampliando nossos serviços, sempre com compromisso, seriedade e amor
+        pelo que fazemos.
+      </p>
+    </div>
 
   </div>
-
 </section>
 
    <!-- ================= CONTATO ================= -->
@@ -1111,7 +1113,7 @@
     let currentProduct = null;
     let currentVariantId = null;
 
-    const cartCountEl = document.getElementById("cartCount");
+    const cartCountEl = document.getElementById("cart-count");
     const cartOverlay = document.getElementById("cartOverlay");
     const cartItemsEl = document.getElementById("cartItems");
     const cartTotalEl = document.getElementById("cartTotal");
@@ -1317,10 +1319,13 @@ modalQuantity.value = 1;
        CARRINHO / CHECKOUT
     ========================== */
 
-    document.getElementById("btnOpenCart").addEventListener("click", () => {
-      rebuildCartUI();
-      cartOverlay.classList.add("active");
-    });
+    const openCartBtn = document.getElementById("openCart");
+if (openCartBtn) {
+  openCartBtn.addEventListener("click", () => {
+    rebuildCartUI();
+    cartOverlay.classList.add("active");
+  });
+}
 
     document.getElementById("cartClose").addEventListener("click", () => {
       cartOverlay.classList.remove("active");
@@ -1517,27 +1522,49 @@ modalQuantity.value = 1;
     };
 
     function setSvcStep(step) {
-      svcStepAtual = step;
-      svcSteps.forEach(el => {
-        el.classList.toggle("active", parseInt(el.dataset.step, 10) === step);
-      });
-    }
+  svcStepAtual = step;
+  svcSteps.forEach(el => {
+    el.classList.toggle("active", parseInt(el.dataset.step, 10) === step);
+  });
+}
 
-    function abrirSvcModal() {
-      svcOverlay.classList.add("active");
-      setSvcStep(1);
-    }
+function abrirSvcModal() {
+  if (!svcOverlay) return;
+  svcOverlay.classList.add("active");
+  setSvcStep(1);
+}
 
-    function fecharSvcModal() {
-      svcOverlay.classList.remove("active");
-    }
+function fecharSvcModal() {
+  if (!svcOverlay) return;
+  svcOverlay.classList.remove("active");
+}
 
-    document.getElementById("btnAbrirOrcamentoServicos").addEventListener("click", abrirSvcModal);
-    document.getElementById("btnSolicitarServico").addEventListener("click", abrirSvcModal);
-    document.getElementById("serviceModalClose").addEventListener("click", fecharSvcModal);
-    svcOverlay.addEventListener("click", (e) => {
-      if (e.target === svcOverlay) fecharSvcModal();
-    });
+/* ===== BOTÕES QUE ABREM O MODAL ===== */
+const btnSolicitarServico = document.getElementById("btnSolicitarServico");
+const btnOpenLead = document.getElementById("openLeadModal"); // botão ao lado do carrinho
+
+if (btnSolicitarServico) {
+  btnSolicitarServico.addEventListener("click", abrirSvcModal);
+}
+
+if (btnOpenLead) {
+  btnOpenLead.addEventListener("click", abrirSvcModal);
+}
+
+/* ===== BOTÃO X (FECHAR) ===== */
+const btnSvcClose = document.getElementById("serviceModalClose");
+if (btnSvcClose) {
+  btnSvcClose.addEventListener("click", fecharSvcModal);
+}
+
+/* ===== CLIQUE FORA DO MODAL FECHA ===== */
+if (svcOverlay) {
+  svcOverlay.addEventListener("click", (e) => {
+    if (e.target === svcOverlay) {
+      fecharSvcModal();
+    }
+  });
+}
 
     // PASSO 1 – tipo / modalidade
     const step1Next = document.getElementById("serviceStep1Next");
