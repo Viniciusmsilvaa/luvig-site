@@ -977,6 +977,12 @@ button {
   font-weight: 700;
 }
 
+/* BOTÕES FLUTUANTES – ESCONDIDOS POR PADRÃO (DESKTOP) */
+.floating-actions {
+  display: none;
+}
+
+
 /* =========================
    CARRINHO
 ========================= */
@@ -1475,11 +1481,12 @@ button {
   }
 
   /* =========================
-   BOTÕES FLUTUANTES MOBILE
+   BOTÕES FLUTUANTES MOBILE + AJUSTES FINAIS
 ========================= */
 
+/* Base: escondido por padrão (desktop) */
 .floating-actions {
-  display: none; /* some por padrão, só aparece no mobile */
+  display: none;
 }
 
 .fab {
@@ -1509,10 +1516,30 @@ button {
   color: #ffffff;
   font-size: 26px;
 }
+
 /* =========================
    AJUSTES FINAIS – MOBILE
 ========================= */
 @media (max-width: 768px) {
+
+  /* Botões flutuantes SOMENTE MOBILE */
+  .floating-actions {
+    position: fixed;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    z-index: 9999;
+    pointer-events: none; /* o container não bloqueia clique no conteúdo */
+  }
+
+  .floating-actions .fab {
+    pointer-events: auto; /* mas os botões aceitam clique */
+  }
+
   /* Cabeçalho: logo centralizada e sem botões de texto */
   .header-inner {
     flex-direction: column;
@@ -1615,24 +1642,15 @@ button {
   .product-image-carousel {
     height: 140px;
   }
+}
 
-  /* Botões flutuantes no rodapé */
+/* Esconde no computador (garantia) */
+@media (min-width: 769px) {
   .floating-actions {
-    display: flex;
-    position: fixed;
-    bottom: 16px;
-    left: 0;
-    right: 0;
-    padding: 0 16px;
-    justify-content: space-between;
-    z-index: 120;
-    pointer-events: none; /* o container não bloqueia clique no conteúdo */
+    display: none !important;
   }
-
-  .floating-actions .fab {
-    pointer-events: auto; /* mas os botões aceitam clique */
-  }
+}}
 }
 
-}
-}
+
+

@@ -1113,10 +1113,20 @@
     let currentProduct = null;
     let currentVariantId = null;
 
-    const cartCountEl = document.getElementById("cart-count");
+    const cartCountEl = document.getElementById("cartCount");
     const cartOverlay = document.getElementById("cartOverlay");
     const cartItemsEl = document.getElementById("cartItems");
     const cartTotalEl = document.getElementById("cartTotal");
+
+    // botões do cabeçalho
+const btnOpenLead = document.getElementById("openLeadModal");
+const btnOpenCart = document.getElementById("openCart");
+
+// botões flutuantes (mobile)
+const floatingWhatsBtn = document.getElementById("fabWhats");
+const floatingCartBtn = document.getElementById("fabCart");
+const floatingCartCount = document.getElementById("fabCartCount");
+
 
     const toast = document.getElementById("toast");
 
@@ -1126,12 +1136,21 @@
       setTimeout(() => toast.classList.remove("show"), 2200);
     }
 
-    function updateCartCount() {
-      const total = cart.reduce((sum, item) => sum + item.qtd, 0);
-      cartCountEl.textContent = total;
-    }
+   function updateCartCount() {
+  const total = cart.reduce((sum, item) => sum + item.qtd, 0);
 
-    function rebuildCartUI() {
+  // contador do cabeçalho
+  if (cartCountEl) {
+    cartCountEl.textContent = total;
+  }
+
+  // badge do botão flutuante (mobile)
+  if (floatingCartCount) {
+    floatingCartCount.textContent = total;
+  }
+}
+   
+      function rebuildCartUI() {
       if (!cartItemsEl) return;
       cartItemsEl.innerHTML = "";
       if (cart.length === 0) {
@@ -1321,7 +1340,6 @@ modalQuantity.value = 1;
 
 const openCartBtn = document.getElementById("openCart");        // botão do cabeçalho (desktop)
 const openCartBtnMobile = document.getElementById("openCartMobile"); // botão redondo (mobile)
-
 function abrirCarrinho() {
   rebuildCartUI();
   cartOverlay.classList.add("active");
@@ -1362,7 +1380,7 @@ function abrirCarrinho() {
     });
 
     checkoutOverlay.addEventListener("click", (e) => {
-      if (e.target === checkoutOverlay) checkoutOverlay.classListemove("active");
+      if (e.target === checkoutOverlay) checkoutOverlay.classList.remove("active");
     });
 
     document.getElementById("checkoutConfirm").addEventListener("click", () => {
@@ -1375,10 +1393,9 @@ function abrirCarrinho() {
       const cidade = document.getElementById("checkoutCidade").value.trim();
 
       if (!nome || !sobrenome || !telefone || !email || !endereco || !bairro || !cidade) {
-        showToast("Preencha todos os dados para finalizar o pedido.");
-        return;
+  showToast("Preencha todos os dados para finalizar o pedido.");
+  return;
       }
-
       let linhasProdutos = "";
       cart.forEach(item => {
         linhasProdutos += `${item.qtd}x ${item.nome} - ${item.peso} - ${formatPrice(item.preco)}%0A`;
@@ -1543,8 +1560,7 @@ function fecharSvcModal() {
 }
 
 /* ===== BOTÕES QUE ABREM O MODAL (desktop + mobile) ===== */
-const btnSolicitarServico = document.getElementById("btnSolicitarServico");
-const btnOpenLead = document.getElementById("openLeadModal");           // botão do cabeçalho (desktop)
+const btnSolicitarServico = document.getElementById("btnSolicitarServico");     
 const btnOpenLeadMobile = document.getElementById("openLeadModalMobile"); // botão redondo (mobile)
 
 if (btnSolicitarServico) {
@@ -1759,29 +1775,37 @@ if (btnSolicitarServico) {
       showToast("Solicitação enviada para o WhatsApp.");
       fecharSvcModal();
     });
-  </script>
-<  <!-- ===== BOTÕES FLUTUANTES – APENAS MOBILE ===== -->
+
+    // Quando clicar no botão flutuante do Whats, faz a mesma ação do "Solicitar informações" do header
+if (floatingWhatsBtn && btnOpenLead) {
+  floatingWhatsBtn.addEventListener("click", () => {
+    btnOpenLead.click();
+  });
+}
+
+// Quando clicar no botão flutuante do carrinho, faz a mesma ação do ícone de carrinho do header
+if (floatingCartBtn && btnOpenCart) {
+  floatingCartBtn.addEventListener("click", () => {
+    btnOpenCart.click();
+  });
+}
+ </script>
+
+    <!-- BOTÕES FLUTUANTES – SOMENTE MOBILE -->
   <div class="floating-actions">
-    <!-- Whats / solicitar informações -->
-    <button
-      class="fab fab-whats"
-      id="openLeadModalMobile"
-      aria-label="Solicitar informações pelo WhatsApp"
-      type="button"
-    >
+    <!-- Botão Whats / Orçamento -->
+    <button type="button" class="fab fab-whats" id="fabWhats">
       <img src="whats_logo-removebg-preview.png" alt="WhatsApp LUVIG">
     </button>
 
-    <!-- Carrinho -->
-    <button
-      class="fab fab-cart"
-      id="openCartMobile"
-      aria-label="Abrir carrinho"
-      type="button"
-    >
-      🛒
+    <!-- Botão Carrinho -->
+    <button type="button" class="fab fab-cart" id="fabCart">
+      <img src="icon-carrinho.png" alt="Carrinho LUVIG">
+      <span class="fab-cart-count" id="fabCartCount">0</span>
     </button>
   </div>
+</body>
+</html>
 </body>
 
 
