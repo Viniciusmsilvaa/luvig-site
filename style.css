@@ -1204,111 +1204,100 @@ button {
   transform: translateX(-50%) translateY(0);
 }
 
-/* ===== HEADER E LAYOUT RESPONSIVO PARA CELULAR ===== */
+/* ===== HEADER E LAYOUT RESPONSIVO PARA CELULAR (ATUALIZADO) ===== */
 @media (max-width: 768px) {
 
-  /* Evitar rolagem lateral / zoom estranho */
+  /* Evitar rolagem lateral */
   html, body {
     max-width: 100%;
     overflow-x: hidden;
   }
 
-  /* Container principal do cabeçalho em COLUNA */
-  header .container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+  /* --- CABEÇALHO --- */
+  
+  /* Container flex que permite quebra de linha controlada */
+  .header-inner {
+    flex-direction: row; /* Elementos lado a lado */
+    flex-wrap: wrap;     /* Permite que o menu caia para a linha de baixo */
+    align-items: center;
+    padding: 12px 0;     /* Espaçamento interno mais equilibrado */
+    gap: 0;              /* Removemos o gap geral para controlar manualmente */
   }
 
-  /* LINHA 1 – Logo + textos da marca */
-  .logo-area,
-  .header-brand {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    /* Centralizar texto da marca abaixo da logo no mobile */
-    justify-content: center;
-    text-align: center;
-    flex: 1 1 100%;
+  /* 1. LOGO (Esquerda) */
+  .logo-area {
+    flex: 1;                     /* Ocupa o espaço sobrando à esquerda */
+    justify-content: flex-start; /* Alinha à esquerda */
     margin: 0;
   }
 
-  /* Logo menor */
-  .logo-area img,
-  .logo-luvig,
-  .header-logo img,
+  /* Ajuste da imagem da logo */
   .logo-img {
-    max-height: 28px;
+    height: 32px;        /* Tamanho bom para mobile */
     width: auto;
-    height: 28px;
   }
 
-  /* Título LUVIG Serviços Especializados menor */
-  .logo-text-title,
-  .header-brand h1,
-  header h1,
+  /* Texto da logo alinhado à esquerda */
+  .logo-text {
+    text-align: left;
+    margin-left: 8px;
+  }
+
   .logo-title {
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1;
   }
 
-  /* Subtítulo “14 anos em Governador Celso Ramos” menor */
-  .logo-text-subtitle,
-  .header-brand small,
-  header small,
   .logo-subtitle {
-    font-size: 12px;
-  }
-  
-  .logo-badge {
-    font-size: 10px;
-  }
-  
-  .logo-text {
-    text-align: center;
+    font-size: 11px;
   }
 
-  /* LINHA 2 – Menu */
-  .nav-links {
-    width: 100%;
+  /* DICA DE DESIGN: Esconder o badge "14 anos..." no celular.
+     Ele polui muito o visual e deixa a logo "estranha". */
+  .logo-badge {
+    display: none; 
+  }
+
+  /* 2. BOTÃO CARRINHO (Direita) */
+  .header-actions {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px 16px;
-    margin-top: 4px;
-    justify-content: space-between;
+    width: auto;         /* Ocupa apenas o tamanho do botão */
+    margin: 0;
+    order: 2;            /* Garante que fique à direita da logo */
+  }
+
+  .cart-button {
+    padding: 6px 12px;   /* Um pouco mais compacto */
     font-size: 13px;
-    row-gap: 8px;
-    order: 3;
+  }
+
+  /* 3. MENU (Linha de baixo) */
+  .nav-links {
+    order: 3;            /* Força ir para baixo */
+    width: 100%;         /* Ocupa a largura total */
+    margin-top: 14px;    /* Separação do topo */
+    padding-top: 10px;
+    border-top: 1px solid #e5e7eb; /* Linha fina elegante separando o menu */
+    
+    display: flex;
+    justify-content: space-between; /* Espalha os links uniformemente */
+    gap: 10px;
+    overflow-x: auto;    /* Se a tela for muito pequena, permite deslizar o dedo */
+    white-space: nowrap; /* Não quebra o texto do menu */
+    padding-bottom: 4px; /* Espaço para scroll se necessário */
   }
 
   .nav-links a {
-    font-size: 14px;
-    padding: 2px 0;
-    flex: 1 1 auto;
-    text-align: center;
+    font-size: 13px;
+    padding: 4px 6px;
+    color: #4b5563;      /* Cinza mais suave */
+    font-weight: 500;
   }
   
-  /* Cabeçalho geral mobile */
-  .header-inner {
-    flex-wrap: wrap;
-    row-gap: 12px;
-    flex-direction: column;
-    align-items: center;
-  }
+  /* --- OUTROS AJUSTES GERAIS MOBILE --- */
   
-  /* Mostra os botões de ação (Carrinho) no mobile */
-  .header-actions {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-top: 10px;
-    order: 2; /* Fica entre a Logo (1) e o Menu (3) */
-  }
-  
-  /* HERO EM UMA COLUNA NO MOBILE */
   .hero {
-    padding: 28px 0 36px;
+    padding: 20px 0 36px;
   }
 
   .hero-grid {
@@ -1318,79 +1307,50 @@ button {
   
   .hero-content {
       order: 2;
+      text-align: center; /* Centraliza texto do hero no mobile */
   }
 
   .hero-content h1 {
     font-size: 22px;
-    max-width: none;
   }
 
-  .hero-content p {
-    font-size: 14px;
-  }
-
-  /* visual do hero vai para baixo do texto (ou antes, conforme ordem) */
   .hero-visual {
     order: 1;
-    margin: 0 -12px; /* carrossel ocupa quase toda a largura */
+    margin: 0 -16px; /* Carrossel sangrando nas bordas */
   }
   
   .hero-slider {
-    height: 220px;
-    border-radius: 18px;
+    height: 200px;
+    border-radius: 0; /* Remove bordas arredondadas no mobile p/ estilo "app" */
   }
   
-  /* Botões "Ver produtos BeL" e "Ver serviços LUVIG" lado a lado */
+  /* Botões do Hero lado a lado */
   .hero-actions {
     width: 100%;
-    justify-content: space-between;
-    gap: 8px;
+    justify-content: center;
+    gap: 10px;
   }
 
-  .hero-actions .btn-primary,
-  .hero-actions .btn-secondary {
-    flex: 1 1 48%;
-    text-align: center;
-    font-size: 14px;
-  }
-
-  /* Balões de +14 anos / Atendimento / Produtos BeL – cada um em uma linha */
   .hero-badges {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .hero-badges span {
-    width: 100%;
     justify-content: center;
   }
 
-  /* SERVIÇOS: 1 card por linha */
-  .services-grid {
+  /* Grids de produtos e serviços */
+  .services-grid, 
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
-  /* PRODUTOS: 2 cards por linha no mobile */
   .products-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 12px;
   }
   
-  /* PRIMEIRO grupo (Verificar – Kit teste) ocupa a linha inteira */
   .product-group:first-of-type .products-grid {
     grid-template-columns: 1fr;
   }
-  
-  .product-card {
-    min-width: 0;
-  }
 
-  .product-image-carousel {
-    height: 140px;
-  }
-
-  /* CONTATO: empilhar blocos */
-  .contact-grid {
-    grid-template-columns: 1fr;
+  .floating-actions {
+    display: none !important;
   }
 }
