@@ -1212,9 +1212,8 @@ button {
     overflow-x: hidden;
   }
 
-  /* --- CABEÇALHO --- */
+  /* --- CABEÇALHO EM LINHA --- */
   
-  /* Transforma o cabeçalho em LINHA (Logo Esq | Carrinho Dir) */
   .header-inner {
     display: flex;
     flex-direction: row;     /* Itens lado a lado */
@@ -1225,9 +1224,9 @@ button {
     gap: 0; 
   }
 
-  /* 1. LOGO (Alinhada à esquerda) */
+  /* 1. LOGO (Esquerda) */
   .logo-area {
-    flex: 1;                 /* Empurra o carrinho para a ponta */
+    flex: 1;                 
     justify-content: flex-start;
     margin: 0;
     min-width: auto;
@@ -1239,7 +1238,7 @@ button {
   }
 
   .logo-text {
-    text-align: left;        /* Texto alinhado à esquerda junto da imagem */
+    text-align: left;
     margin-left: 8px;
   }
 
@@ -1248,17 +1247,13 @@ button {
     line-height: 1;
   }
 
-  .logo-subtitle {
-    font-size: 11px;
-    margin-top: 2px;
-  }
-
-  /* REMOVE o texto "14 anos..." e badges no celular para limpar o visual */
+  /* ESCONDE TUDO que não for o título LUVIG */
+  .logo-subtitle,
   .logo-badge {
-    display: none; 
+    display: none !important; 
   }
 
-  /* 2. BOTÃO CARRINHO (Alinhado à direita) */
+  /* 2. BOTÃO CARRINHO (Direita) */
   .header-actions {
     display: flex;
     width: auto;
@@ -1271,13 +1266,13 @@ button {
     font-size: 13px;
   }
 
-  /* 3. MENU (Linha de baixo, estilo barra de app) */
+  /* 3. MENU (Linha de baixo) */
   .nav-links {
     order: 3;
     width: 100%;
     margin-top: 12px;
     padding-top: 12px;
-    border-top: 1px solid #e5e7eb; /* Linha fina separando o menu */
+    border-top: 1px solid #e5e7eb;
     
     display: flex;
     justify-content: space-between;
@@ -1290,7 +1285,8 @@ button {
     color: #4b5563;
     font-weight: 500;
   }
-   /* --- AJUSTES GERAIS (HERO, PRODUTOS, ETC) - MANTIDOS --- */
+
+  /* --- OUTROS AJUSTES MANTIDOS --- */
   
   .hero {
     padding: 24px 0 36px;
