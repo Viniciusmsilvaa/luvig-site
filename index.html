@@ -1282,8 +1282,7 @@ modalQuantity.value = 1;
    CARRINHO / CHECKOUT
 ========================== */
 
-const openCartBtnHeader = document.getElementById("openCart");        // botão do cabeçalho (desktop)
-const fabCartBtn = document.getElementById("fabCart");              // botão flutuante (mobile)
+const openCartBtnHeader = document.getElementById("openCart");        // botão do cabeçalho (desktop e mobile)
 
 function abrirCarrinho() {
   rebuildCartUI();
@@ -1292,9 +1291,6 @@ function abrirCarrinho() {
 
 if(openCartBtnHeader) {
     openCartBtnHeader.addEventListener("click", abrirCarrinho);
-}
-if(fabCartBtn) {
-    fabCartBtn.addEventListener("click", abrirCarrinho);
 }
 
     document.getElementById("cartClose").addEventListener("click", () => {
@@ -1735,26 +1731,6 @@ if (svcOverlay) {
       showToast("Solicitação enviada para o WhatsApp.");
       fecharSvcModal();
     });
-
-        // =========================
-    // BOTÕES FLUTUANTES MOBILE
-    // =========================
-
-    // REMOVIDO BOTÃO DE ORÇAMENTO (WHATS) CONFORME PEDIDO
-    // const floatingWhatsBtn = document.getElementById("fabWhats"); 
-
-    // Carrinho abre o mesmo carrinho lateral
-    // const floatingCartBtn já definido acima.
-    
-    // Removido evento do fabWhats
   </script>
-
-
-    <div class="floating-actions">
-    <button type="button" class="fab fab-cart" id="fabCart">
-      <img src="ícone-do-vetor-carrinho-de-compras-isolado-no-fundo-transparente-li-130114699.webp" alt="Carrinho LUVIG">
-      <span class="fab-cart-count" id="fabCartCount">0</span>
-    </button>
-  </div>
 </body>
 </html>

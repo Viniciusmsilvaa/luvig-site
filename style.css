@@ -932,12 +932,6 @@ button {
   font-weight: 700;
 }
 
-/* BOTÕES FLUTUANTES – ESCONDIDOS POR PADRÃO (DESKTOP) */
-.floating-actions {
-  display: none;
-}
-
-
 /* =========================
    CARRINHO
 ========================= */
@@ -1210,38 +1204,6 @@ button {
   transform: translateX(-50%) translateY(0);
 }
 
-/* =========================
-   BOTÕES FLUTUANTES + ESTILOS MOBILE
-========================= */
-
-.fab {
-  width: 56px;
-  height: 56px;
-  border-radius: 999px;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35);
-  cursor: pointer;
-}
-
-.fab img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-}
-
-.fab-whats {
-  background: #22c55e;
-}
-
-.fab-cart {
-  background: #111827;
-  color: #ffffff;
-  font-size: 26px;
-}
-
 /* ===== HEADER E LAYOUT RESPONSIVO PARA CELULAR ===== */
 @media (max-width: 768px) {
 
@@ -1335,9 +1297,13 @@ button {
     align-items: center;
   }
   
-  /* Esconde os botões "Solicitar informações" e "Carrinho" no topo (usa os flutuantes) */
+  /* Mostra os botões de ação (Carrinho) no mobile */
   .header-actions {
-    display: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    order: 2; /* Fica entre a Logo (1) e o Menu (3) */
   }
   
   /* HERO EM UMA COLUNA NO MOBILE */
@@ -1426,30 +1392,5 @@ button {
   /* CONTATO: empilhar blocos */
   .contact-grid {
     grid-template-columns: 1fr;
-  }
-  
-  /* Botões flutuantes SOMENTE MOBILE */
-  .floating-actions {
-    position: fixed;
-    bottom: 16px;
-    left: 0;
-    right: 0;
-    padding: 0 16px;
-    display: flex;
-    justify-content: flex-end; /* Alinha o carrinho à direita, já que o whats saiu */
-    gap: 14px;
-    z-index: 9999;
-    pointer-events: none; /* o container não bloqueia clique no conteúdo */
-  }
-
-  .floating-actions .fab {
-    pointer-events: auto; /* mas os botões aceitam clique */
-  }
-}
-
-/* Esconde Botões Flutuantes no computador (garantia) */
-@media (min-width: 769px) {
-  .floating-actions {
-    display: none !important;
   }
 }
