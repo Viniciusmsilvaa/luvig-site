@@ -1212,7 +1212,13 @@ button {
     overflow-x: hidden;
   }
 
-  /* --- CABEÇALHO EM LINHA --- */
+  /* FORÇA MARGEM NAS BORDAS LATERAIS DO CONTAINER NO MOBILE */
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* --- CABEÇALHO --- */
   
   .header-inner {
     display: flex;
@@ -1232,22 +1238,15 @@ button {
     min-width: auto;
   }
 
+  /* AUMENTA A LOGO E AJUSTA */
   .logo-img {
-    height: 32px;            /* Tamanho ideal para celular */
+    height: 48px;            /* Aumentado de 32px para 48px */
     width: auto;
   }
 
-  .logo-text {
-    text-align: left;
-    margin-left: 8px;
-  }
-
-  .logo-title {
-    font-size: 18px;
-    line-height: 1;
-  }
-
-  /* ESCONDE TUDO que não for o título LUVIG */
+  /* ESCONDE O NOME "LUVIG" E OS TEXTOS - SÓ APARECE A IMAGEM */
+  .logo-text,
+  .logo-title,
   .logo-subtitle,
   .logo-badge {
     display: none !important; 
@@ -1286,7 +1285,7 @@ button {
     font-weight: 500;
   }
 
-  /* --- OUTROS AJUSTES MANTIDOS --- */
+  /* --- HERO (CARROSSEL) --- */
   
   .hero {
     padding: 24px 0 36px;
@@ -1306,16 +1305,25 @@ button {
     font-size: 22px;
   }
 
+  /* REMOVE A "SANGRIA" (MARGEM NEGATIVA) PARA O CARROSSEL TER BORDA */
   .hero-visual {
     order: 1;
-    margin: 0 -16px;
+    margin: 0; 
+    margin-top: 10px;
   }
   
+  /* ESCONDE AS FOTOS TRANSPARENTES DE FUNDO */
+  .hero-photo {
+    display: none !important;
+  }
+  
+  /* ARREDONDA AS BORDAS DO SLIDER, JÁ QUE ELE NÃO TOCA MAIS NO CANTO */
   .hero-slider {
-    height: 200px;
-    border-radius: 0;
+    height: 220px;
+    border-radius: 16px;
   }
   
+  /* Botões do Hero */
   .hero-actions {
     width: 100%;
     justify-content: center;
@@ -1327,6 +1335,7 @@ button {
     justify-content: center;
   }
 
+  /* GRIDS */
   .services-grid, 
   .contact-grid {
     grid-template-columns: 1fr;
