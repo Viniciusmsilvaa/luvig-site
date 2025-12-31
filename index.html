@@ -30,10 +30,6 @@
     </nav>
 
     <div class="header-actions">
-      <button id="openLeadModal" class="btn-primary header-cta">
-        Solicitar informações
-      </button>
-
       <button id="openCart" class="cart-button">
         <span>Carrinho</span>
         <span id="cart-count" class="cart-count">0</span>
@@ -1074,7 +1070,6 @@
 
 
     // botões do cabeçalho
-const btnOpenLead = document.getElementById("openLeadModal");
 const btnOpenCart = document.getElementById("openCart");
 
     const toast = document.getElementById("toast");
@@ -1288,6 +1283,7 @@ modalQuantity.value = 1;
 ========================== */
 
 const openCartBtnHeader = document.getElementById("openCart");        // botão do cabeçalho (desktop)
+const fabCartBtn = document.getElementById("fabCart");              // botão flutuante (mobile)
 
 function abrirCarrinho() {
   rebuildCartUI();
@@ -1296,6 +1292,9 @@ function abrirCarrinho() {
 
 if(openCartBtnHeader) {
     openCartBtnHeader.addEventListener("click", abrirCarrinho);
+}
+if(fabCartBtn) {
+    fabCartBtn.addEventListener("click", abrirCarrinho);
 }
 
     document.getElementById("cartClose").addEventListener("click", () => {
@@ -1741,30 +1740,17 @@ if (svcOverlay) {
     // BOTÕES FLUTUANTES MOBILE
     // =========================
 
-    const floatingWhatsBtn = document.getElementById("fabWhats");
-    const floatingCartBtn  = document.getElementById("fabCart");
-
-    // Whats abre o MESMO modal de orçamento de serviços
-    if (floatingWhatsBtn) {
-      floatingWhatsBtn.addEventListener("click", () => {
-        abrirSvcModal();
-      });
-    }
+    // REMOVIDO BOTÃO DE ORÇAMENTO (WHATS) CONFORME PEDIDO
+    // const floatingWhatsBtn = document.getElementById("fabWhats"); 
 
     // Carrinho abre o mesmo carrinho lateral
-    if (floatingCartBtn) {
-      floatingCartBtn.addEventListener("click", () => {
-        abrirCarrinho();
-      });
-    }
+    // const floatingCartBtn já definido acima.
+    
+    // Removido evento do fabWhats
   </script>
 
 
     <div class="floating-actions">
-    <button type="button" class="fab fab-whats" id="fabWhats">
-      <img src="whats_logo-removebg-preview.png" alt="WhatsApp LUVIG">
-    </button>
-
     <button type="button" class="fab fab-cart" id="fabCart">
       <img src="ícone-do-vetor-carrinho-de-compras-isolado-no-fundo-transparente-li-130114699.webp" alt="Carrinho LUVIG">
       <span class="fab-cart-count" id="fabCartCount">0</span>
