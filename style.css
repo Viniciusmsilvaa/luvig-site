@@ -1204,10 +1204,9 @@ button {
   transform: translateX(-50%) translateY(0);
 }
 
-/* ===== HEADER E LAYOUT RESPONSIVO PARA CELULAR (ATUALIZADO) ===== */
+/* ===== HEADER E LAYOUT RESPONSIVO PARA CELULAR (CORRIGIDO) ===== */
 @media (max-width: 768px) {
 
-  /* Evitar rolagem lateral */
   html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -1215,89 +1214,86 @@ button {
 
   /* --- CABEÇALHO --- */
   
-  /* Container flex que permite quebra de linha controlada */
+  /* Transforma o cabeçalho em LINHA (Logo Esq | Carrinho Dir) */
   .header-inner {
-    flex-direction: row; /* Elementos lado a lado */
-    flex-wrap: wrap;     /* Permite que o menu caia para a linha de baixo */
+    display: flex;
+    flex-direction: row;     /* Itens lado a lado */
+    flex-wrap: wrap;         /* Permite o menu ir para baixo */
     align-items: center;
-    padding: 12px 0;     /* Espaçamento interno mais equilibrado */
-    gap: 0;              /* Removemos o gap geral para controlar manualmente */
+    justify-content: space-between;
+    padding: 12px 0;
+    gap: 0; 
   }
 
-  /* 1. LOGO (Esquerda) */
+  /* 1. LOGO (Alinhada à esquerda) */
   .logo-area {
-    flex: 1;                     /* Ocupa o espaço sobrando à esquerda */
-    justify-content: flex-start; /* Alinha à esquerda */
+    flex: 1;                 /* Empurra o carrinho para a ponta */
+    justify-content: flex-start;
     margin: 0;
+    min-width: auto;
   }
 
-  /* Ajuste da imagem da logo */
   .logo-img {
-    height: 32px;        /* Tamanho bom para mobile */
+    height: 32px;            /* Tamanho ideal para celular */
     width: auto;
   }
 
-  /* Texto da logo alinhado à esquerda */
   .logo-text {
-    text-align: left;
+    text-align: left;        /* Texto alinhado à esquerda junto da imagem */
     margin-left: 8px;
   }
 
   .logo-title {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1;
   }
 
   .logo-subtitle {
     font-size: 11px;
+    margin-top: 2px;
   }
 
-  /* DICA DE DESIGN: Esconder o badge "14 anos..." no celular.
-     Ele polui muito o visual e deixa a logo "estranha". */
+  /* REMOVE o texto "14 anos..." e badges no celular para limpar o visual */
   .logo-badge {
     display: none; 
   }
 
-  /* 2. BOTÃO CARRINHO (Direita) */
+  /* 2. BOTÃO CARRINHO (Alinhado à direita) */
   .header-actions {
     display: flex;
-    width: auto;         /* Ocupa apenas o tamanho do botão */
+    width: auto;
     margin: 0;
-    order: 2;            /* Garante que fique à direita da logo */
+    order: 2;
   }
 
   .cart-button {
-    padding: 6px 12px;   /* Um pouco mais compacto */
+    padding: 6px 14px;
     font-size: 13px;
   }
 
-  /* 3. MENU (Linha de baixo) */
+  /* 3. MENU (Linha de baixo, estilo barra de app) */
   .nav-links {
-    order: 3;            /* Força ir para baixo */
-    width: 100%;         /* Ocupa a largura total */
-    margin-top: 14px;    /* Separação do topo */
-    padding-top: 10px;
-    border-top: 1px solid #e5e7eb; /* Linha fina elegante separando o menu */
+    order: 3;
+    width: 100%;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb; /* Linha fina separando o menu */
     
     display: flex;
-    justify-content: space-between; /* Espalha os links uniformemente */
-    gap: 10px;
-    overflow-x: auto;    /* Se a tela for muito pequena, permite deslizar o dedo */
-    white-space: nowrap; /* Não quebra o texto do menu */
-    padding-bottom: 4px; /* Espaço para scroll se necessário */
+    justify-content: space-between;
+    gap: 0;
   }
 
   .nav-links a {
     font-size: 13px;
-    padding: 4px 6px;
-    color: #4b5563;      /* Cinza mais suave */
+    padding: 4px;
+    color: #4b5563;
     font-weight: 500;
   }
-  
-  /* --- OUTROS AJUSTES GERAIS MOBILE --- */
+   /* --- AJUSTES GERAIS (HERO, PRODUTOS, ETC) - MANTIDOS --- */
   
   .hero {
-    padding: 20px 0 36px;
+    padding: 24px 0 36px;
   }
 
   .hero-grid {
@@ -1307,7 +1303,7 @@ button {
   
   .hero-content {
       order: 2;
-      text-align: center; /* Centraliza texto do hero no mobile */
+      text-align: center;
   }
 
   .hero-content h1 {
@@ -1316,15 +1312,14 @@ button {
 
   .hero-visual {
     order: 1;
-    margin: 0 -16px; /* Carrossel sangrando nas bordas */
+    margin: 0 -16px;
   }
   
   .hero-slider {
     height: 200px;
-    border-radius: 0; /* Remove bordas arredondadas no mobile p/ estilo "app" */
+    border-radius: 0;
   }
   
-  /* Botões do Hero lado a lado */
   .hero-actions {
     width: 100%;
     justify-content: center;
@@ -1332,10 +1327,10 @@ button {
   }
 
   .hero-badges {
+    align-items: center;
     justify-content: center;
   }
 
-  /* Grids de produtos e serviços */
   .services-grid, 
   .contact-grid {
     grid-template-columns: 1fr;
@@ -1349,7 +1344,7 @@ button {
   .product-group:first-of-type .products-grid {
     grid-template-columns: 1fr;
   }
-
+  
   .floating-actions {
     display: none !important;
   }

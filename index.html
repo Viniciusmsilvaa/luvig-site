@@ -37,6 +37,7 @@
     </div>
   </div>
 </header>
+
   <section id="inicio" class="hero">
     <div class="container">
       <div class="hero-grid">
@@ -1062,7 +1063,10 @@
     let currentProduct = null;
     let currentVariantId = null;
 
-    const cartCountEl = document.getElementById("cartCount");
+    // AQUI ESTAVA O ERRO: cartCount vs cart-count
+    // Corrigido para buscar pelo ID correto no HTML
+    const cartCountEl = document.getElementById("cart-count");
+    
     const cartOverlay = document.getElementById("cartOverlay");
     const cartItemsEl = document.getElementById("cartItems");
     const cartTotalEl = document.getElementById("cartTotal");
@@ -1070,7 +1074,16 @@
 
 
     // botões do cabeçalho
-const btnOpenCart = document.getElementById("openCart");
+const openCartBtnHeader = document.getElementById("openCart");        // botão do cabeçalho (desktop e mobile)
+
+function abrirCarrinho() {
+  rebuildCartUI();
+  cartOverlay.classList.add("active");
+}
+
+if(openCartBtnHeader) {
+    openCartBtnHeader.addEventListener("click", abrirCarrinho);
+}
 
     const toast = document.getElementById("toast");
 
@@ -1281,17 +1294,6 @@ modalQuantity.value = 1;
     /* ==========================
    CARRINHO / CHECKOUT
 ========================== */
-
-const openCartBtnHeader = document.getElementById("openCart");        // botão do cabeçalho (desktop e mobile)
-
-function abrirCarrinho() {
-  rebuildCartUI();
-  cartOverlay.classList.add("active");
-}
-
-if(openCartBtnHeader) {
-    openCartBtnHeader.addEventListener("click", abrirCarrinho);
-}
 
     document.getElementById("cartClose").addEventListener("click", () => {
       cartOverlay.classList.remove("active");
@@ -1734,3 +1736,4 @@ if (svcOverlay) {
   </script>
 </body>
 </html>
+}
