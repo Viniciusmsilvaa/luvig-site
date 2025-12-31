@@ -215,51 +215,6 @@ button {
   position: relative;
   padding-bottom: 4px;
 }
-  /* HERO EM UMA COLUNA NO MOBILE */
-  .hero {
-    padding: 28px 0 36px;
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .hero-content h1 {
-    font-size: 22px;
-  }
-
-  .hero-content p {
-    font-size: 14px;
-  }
-
-  /* opcional: visual do hero vai para baixo do texto */
-  .hero-visual {
-    order: 2;
-    margin-top: 8px;
-  }
-
-  /* SERVIÇOS: 1 card por linha */
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* PRODUTOS: 2 cards por linha no mobile */
-  .products-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  /* SOBRE: já tem @media próprio a 900px,
-     aqui só garantimos que não estoure a largura */
-  .about-section {
-    padding: 40px 0;
-  }
-
-  /* CONTATO: empilhar blocos */
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
 
 .nav-links a::after {
   content: "";
@@ -1254,240 +1209,9 @@ button {
   transform: translateX(-50%) translateY(0);
 }
 
-/* ===== HEADER RESPONSIVO PARA CELULAR ===== */
-@media (max-width: 768px) {
-
-  /* Evitar rolagem lateral / zoom estranho */
-  html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  /* Container principal do cabeçalho em COLUNA */
-  header .container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  /* LINHA 1 – Logo + textos da marca */
-  .logo-area,
-  .header-brand {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  /* Logo menor */
-  .logo-area img,
-  .logo-luvig,
-  .header-logo img {
-    max-height: 28px;
-    width: auto;
-  }
-
-  /* Título LUVIG Serviços Especializados menor */
-  .logo-text-title,
-  .header-brand h1,
-  header h1 {
-    font-size: 16px;
-    line-height: 1.2;
-  }
-
-  /* Subtítulo “14 anos em Governador Celso Ramos” menor */
-  .logo-text-subtitle,
-  .header-brand small,
-  header small {
-    font-size: 11px;
-  }
-
-  /* LINHA 2 – Botões Solicitar + Carrinho */
-  .header-actions {
-    display: flex;
-    width: 100%;
-    gap: 8px;
-  }
-
-  .header-actions .btn-quote,
-  .header-actions .cart-button,
-  .btn-quote,
-  .btn-cart {
-    flex: 1;
-    padding: 8px 10px;
-    font-size: 13px;
-    text-align: center;
-  }
-
-  /* LINHA 3 – Menu (Início / Serviços / Produtos / Sobre / Contato) */
-  header nav {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 16px;
-    margin-top: 4px;
-  }
-
-  header nav a {
-    font-size: 14px;
-    padding: 2px 0;
-  }
-/* ---------- HEADER MOBILE ---------- */
-}
-
-@media (max-width: 768px) {
-  .header-inner {
-    flex-wrap: wrap;
-    row-gap: 12px;
-  }
-
-  .logo-img {
-    height: 28px;
-  }
-
-  .logo-title {
-    font-size: 16px;
-  }
-
-  .logo-subtitle {
-    font-size: 12px;
-  }
-
-  .logo-badge {
-    font-size: 10px;
-  }
-
-  /* Logo ocupa a linha inteira no topo */
-  .logo-area {
-    flex: 1 1 100%;
-  }
-
-  /* Botões ficam logo abaixo da logo, alinhados à direita */
-  .header-actions {
-    order: 2;
-    margin-left: auto;
-    transform: scale(0.9);
-    transform-origin: right center;
-  }
-
-  /* Menu ocupa linha inteira e fica menor */
-  .nav-links {
-    order: 3;
-    width: 100%;
-    justify-content: space-between;
-    font-size: 13px;
-    flex-wrap: wrap;
-    row-gap: 8px;
-  }
-
-  .nav-links a {
-    flex: 1 1 auto;
-    text-align: center;
-  }
-  /* ===== SEÇÃO SOBRE / SOBRE A LUVIG ===== */
-
-.about-section {
-  padding: 60px 0;
-  background: #bfbfbf; /* cinza de fundo, ajuste se quiser mais claro/escuro */
-}
-
-.about-wrapper {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 16px;
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: 40px;
-  align-items: stretch;
-}
-
-/* CARD BASE (AZUL, ARREDONDADO) */
-.about-card {
-  background: var(--blue);
-  border-radius: 40px;
-  padding: 32px;
-  color: #ffffff;
-  box-shadow: var(--shadow-soft);
-}
-
-/* CARD ESQUERDO: mapa + texto */
-.about-card-location {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Mapa colado no topo do card, com cantos arredondados */
-.about-map-wrapper {
-  margin: -32px -32px 16px;      /* faz o mapa “encostar” nas bordas azuis */
-  border-radius: 40px 40px 0 0;  /* mesmos cantos do card em cima */
-  overflow: hidden;
-}
-
-.about-map {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* Texto da localização dentro do card azul */
-.about-location-text {
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.about-location-text h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.about-location-text p {
-  margin-bottom: 8px;
-}
-
-/* CARD DIREITO: SOBRE A LUVIG COM TEXTO CENTRALIZADO */
-.about-card-sobre {
-  text-align: center;
-}
-
-.about-title {
-  font-size: 26px;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-
-.about-text {
-  font-size: 15px;
-  line-height: 1.7;
-  margin-bottom: 12px;
-}
-
-/* RESPONSIVO: EMPILHA OS CARDS NO MOBILE */
-@media (max-width: 900px) {
-  .about-wrapper {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .about-card {
-    padding: 24px;
-    border-radius: 32px;
-  }
-
-  .about-map-wrapper {
-    margin: -24px -24px 12px;
-    border-radius: 32px 32px 0 0;
-  }
-
-  /* =========================
-   BOTÕES FLUTUANTES MOBILE + AJUSTES FINAIS
+/* =========================
+   BOTÕES FLUTUANTES + ESTILOS MOBILE
 ========================= */
-
-/* Base: escondido por padrão (desktop) */
-.floating-actions {
-  display: none;
-}
 
 .fab {
   width: 56px;
@@ -1517,84 +1241,138 @@ button {
   font-size: 26px;
 }
 
-/* =========================
-   AJUSTES FINAIS – MOBILE
-========================= */
+/* ===== HEADER E LAYOUT RESPONSIVO PARA CELULAR ===== */
 @media (max-width: 768px) {
 
-  /* Botões flutuantes SOMENTE MOBILE */
-  .floating-actions {
-    position: fixed;
-    bottom: 16px;
-    left: 0;
-    right: 0;
-    padding: 0 16px;
+  /* Evitar rolagem lateral / zoom estranho */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Container principal do cabeçalho em COLUNA */
+  header .container {
     display: flex;
-    justify-content: space-between;
-    gap: 14px;
-    z-index: 9999;
-    pointer-events: none; /* o container não bloqueia clique no conteúdo */
-  }
-
-  .floating-actions .fab {
-    pointer-events: auto; /* mas os botões aceitam clique */
-  }
-
-  /* Cabeçalho: logo centralizada e sem botões de texto */
-  .header-inner {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
   }
 
-  .logo-area {
+  /* LINHA 1 – Logo + textos da marca */
+  .logo-area,
+  .header-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Centralizar texto da marca abaixo da logo no mobile */
     justify-content: center;
+    text-align: center;
+    flex: 1 1 100%;
     margin: 0;
   }
 
-  .header-actions {
-    display: none; /* esconde os botões "Solicitar informações" e "Carrinho" no topo */
+  /* Logo menor */
+  .logo-area img,
+  .logo-luvig,
+  .header-logo img,
+  .logo-img {
+    max-height: 28px;
+    width: auto;
+    height: 28px;
   }
 
+  /* Título LUVIG Serviços Especializados menor */
+  .logo-text-title,
+  .header-brand h1,
+  header h1,
+  .logo-title {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  /* Subtítulo “14 anos em Governador Celso Ramos” menor */
+  .logo-text-subtitle,
+  .header-brand small,
+  header small,
+  .logo-subtitle {
+    font-size: 12px;
+  }
+  
+  .logo-badge {
+    font-size: 10px;
+  }
+  
+  .logo-text {
+    text-align: center;
+  }
+
+  /* LINHA 2 – Menu */
   .nav-links {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-top: 4px;
     justify-content: space-between;
-    font-size: 14px;
+    font-size: 13px;
+    row-gap: 8px;
+    order: 3;
   }
 
-  /* Hero: carrossel primeiro, texto depois */
-  .hero-inner {
-    padding-top: 18px;
+  .nav-links a {
+    font-size: 14px;
+    padding: 2px 0;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  /* Cabeçalho geral mobile */
+  .header-inner {
+    flex-wrap: wrap;
+    row-gap: 12px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Esconde os botões "Solicitar informações" e "Carrinho" no topo (usa os flutuantes) */
+  .header-actions {
+    display: none;
+  }
+  
+  /* HERO EM UMA COLUNA NO MOBILE */
+  .hero {
+    padding: 28px 0 36px;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
   }
-
-  .hero-visual {
-    order: 1;
-    margin: 0 -12px;          /* carrossel ocupa quase toda a largura */
-  }
-
-  .hero-slider {
-    height: 220px;
-    border-radius: 18px;
-  }
-
+  
   .hero-content {
-    order: 2;
+      order: 2;
   }
 
   .hero-content h1 {
-    font-size: 24px;
+    font-size: 22px;
     max-width: none;
   }
 
   .hero-content p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
+  /* visual do hero vai para baixo do texto (ou antes, conforme ordem) */
+  .hero-visual {
+    order: 1;
+    margin: 0 -12px; /* carrossel ocupa quase toda a largura */
+  }
+  
+  .hero-slider {
+    height: 220px;
+    border-radius: 18px;
+  }
+  
   /* Botões "Ver produtos BeL" e "Ver serviços LUVIG" lado a lado */
   .hero-actions {
     width: 100%;
@@ -1620,21 +1398,22 @@ button {
     justify-content: center;
   }
 
-  /* Produtos – layout mais folgado */
-  .products-section {
-    padding-top: 32px;
+  /* SERVIÇOS: 1 card por linha */
+  .services-grid {
+    grid-template-columns: 1fr;
   }
 
+  /* PRODUTOS: 2 cards por linha no mobile */
   .products-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 colunas padrão no mobile */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 12px;
   }
-
+  
   /* PRIMEIRO grupo (Verificar – Kit teste) ocupa a linha inteira */
   .product-group:first-of-type .products-grid {
     grid-template-columns: 1fr;
   }
-
+  
   .product-card {
     min-width: 0;
   }
@@ -1642,26 +1421,34 @@ button {
   .product-image-carousel {
     height: 140px;
   }
+
+  /* CONTATO: empilhar blocos */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Botões flutuantes SOMENTE MOBILE */
+  .floating-actions {
+    position: fixed;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    z-index: 9999;
+    pointer-events: none; /* o container não bloqueia clique no conteúdo */
+  }
+
+  .floating-actions .fab {
+    pointer-events: auto; /* mas os botões aceitam clique */
+  }
 }
 
-/* Esconde no computador (garantia) */
+/* Esconde Botões Flutuantes no computador (garantia) */
 @media (min-width: 769px) {
   .floating-actions {
     display: none !important;
   }
-}}
 }
-@media (max-width: 768px) {
-  /* Centralizar texto da marca abaixo da logo no mobile */
-  .logo-area {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .logo-text {
-    text-align: center;
-  }
-}
-
-
-
